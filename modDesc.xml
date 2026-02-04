@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="105" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
+  <author>Evan Kirsch</author>
+  <version>1.0.0.0</version>
+  <title>
+      <en>Statistics Extended</en>
+      <de></de>
+  </title>
+  <description>
+    <en><![CDATA[
+GitHub: https://github.com/EvanKirsch/fs25_statsExtended
+]]></en>
+    <de><![CDATA[
+Git-Hub: https://github.com/EvanKirsch/fs25_statsExtended
+]]></de>
+  </description>    
+  <iconFilename>icon_statsExtended.dds</iconFilename>
+  <l10n filenamePrefix="translations/translation" />
+  <multiplayer supported="true"/>
+  <extraSourceFiles>
+    <sourceFile filename="src/SE_statsExtended.lua" />
+    <sourceFile filename="src/gui/SE_statsExtendedGui.lua" />
+    <sourceFile filename="src/gui/SE_statsExtendedController.lua" />
+  </extraSourceFiles>
+</modDesc>

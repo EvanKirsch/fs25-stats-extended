@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI>
+    <GuiElement profile="fs25_menuContainer">
+        <BoxLayout profile="fs25_subCategorySelectorTabbedBox">
+            <Button profile="fs25_subCategorySelectorTabbedTab" id="statsExtendedTab" text="$l10n_ui_menu_tab" onClick="onClickStatsExtended">
+                <ThreePartBitmap profile="fs25_subCategorySelectorTabbedTabBg" name="background"/>
+            </Button>
+        </BoxLayout>
+        <GuiElement profile="fs25_subCategorySelectorTabbedContainer" id="statsExtendedPage">
+            <ScrollingLayout profile="fs25_settingsLayout" id="statsExtendedLayout">
+            </ScrollingLayout>
+        </GuiElement>
+    </GuiElement>
+</GUI>

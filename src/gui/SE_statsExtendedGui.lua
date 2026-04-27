@@ -12,10 +12,10 @@ function SE_statsExtendedGui.new(custom_mt)
     local self = setmetatable({}, custom_mt or SE_statsExtendedGui._mt)
     local statsFrame = g_inGameMenu.pageStatistics
 
-    SE_statsExtendedGui.appendFunction(statsFrame, "onFrameOpen", self, "onFrameOpen")
-    SE_statsExtendedGui.prependedFunction(statsFrame, "onFrameClose", self, "onFrameClose")
-    SE_statsExtendedGui.overwriteFunction(statsFrame.subCategoryPaging, "onClickCallback", self, "onClickCallback")
-    SE_statsExtendedGui.overwriteFunction(statsFrame, "inputEvent", self, "inputEvent")
+    SE_statsExtendedGui.appendFunction(statsFrame, "onFrameOpen", self, "se_onFrameOpen")
+    SE_statsExtendedGui.prependedFunction(statsFrame, "onFrameClose", self, "se_onFrameClose")
+    SE_statsExtendedGui.overwriteFunction(statsFrame.subCategoryPaging, "onClickCallback", self, "se_onClickCallback")
+    SE_statsExtendedGui.overwriteFunction(statsFrame, "inputEvent", self, "se_inputEvent")
 
     self.statsFrame = statsFrame
     self.screenController = nil
@@ -35,10 +35,11 @@ function SE_statsExtendedGui:addPage(position)
 
     print("addPage SE_statsExtendedGui")
     local screenController = SE_statsExtendedController.register()
-    self.screenController = screenController
+    local statsExtendedPage = screenController.statsExtendedPage
+    local statsExtendedTab = screenController.statsExtendedTab
 
-    self:addElementAtPosition(screenController.statsExtendedPage, self.statsFrame.subCategoryPages[1].parent, position)
-    self:addElementAtPosition(screenController.statsExtendedTab, self.statsFrame.subCategoryBox, position)
+    self:addElementAtPosition(statsExtendedPage, self.statsFrame.subCategoryPages[1].parent, position)
+    self:addElementAtPosition(statsExtendedTab, self.statsFrame.subCategoryBox, position)
 
     table.insert(self.statsFrame.subCategoryPages, position, screenController.statsExtendedPage)
     table.insert(self.statsFrame.subCategoryTabs, position, screenController.statsExtendedTab)
@@ -56,35 +57,37 @@ function SE_statsExtendedGui:addPage(position)
     self.statsFrame:updateAbsolutePosition()
     self.statsFrame:exposeControlsAsFields(self.statsFrame.name)
     self.statsFrame.getDescendants = function()
-        return self.screenController.statsExtendedPage:getDescendants()
+        return statsExtendedPage:getDescendants()
     end
 
-    self.screenController.statsExtendedPage:setTarget(self.statsFrame, self.screenController.statsExtendedPage.target)
-    self.screenController.statsExtendedTab:setTarget(self.statsFrame, self.screenController.statsExtendedTab.target)
+    statsExtendedPage:setTarget(self.statsFrame, statsExtendedPage.target)
+    statsExtendedTab:setTarget(self.statsFrame, statsExtendedTab.target)
 
     FocusManager:setGui(self.statsFrame.name)
-    FocusManager:removeElement(screenController.statsExtendedPage)
-    FocusManager:removeElement(screenController.statsExtendedTab)
-    FocusManager:loadElementFromCustomValues(screenController.statsExtendedPage)
-    FocusManager:loadElementFromCustomValues(screenController.statsExtendedTab)
+    FocusManager:removeElement(statsExtendedPage)
+    FocusManager:removeElement(statsExtendedTab)
+    FocusManager:loadElementFromCustomValues(statsExtendedPage)
+    FocusManager:loadElementFromCustomValues(statsExtendedTab)
     FocusManager:setGui(FocusManager.currentGui)
+
+    self.screenController = screenController
 
     return screenController
 end
 
-function SE_statsExtendedGui:onFrameOpen(frame)
+function SE_statsExtendedGui:se_onFrameOpen(frame)
     print("onFrameOpen SE_statsExtendedGui")
-    self.statsFrame.isOpening = true
+    frame.isOpening = true
 
     if self.screenController ~= nil then
         -- DebugUtil.printTableRecursively(self.screenController)
         self.screenController:onFrameOpen()
     end
 
-    self.statsFrame.isOpening = false
+    frame.isOpening = false
 end
 
-function SE_statsExtendedGui:onFrameClose(frame)
+function SE_statsExtendedGui:se_onFrameClose(frame)
     if self.screenController ~= nil then
         self.screenController:onFrameClose()
     end
@@ -100,24 +103,47 @@ function SE_statsExtendedGui:addElementAtPosition(element, target, position)
     element.parent = target
 end
 
-function SE_statsExtendedGui:onClickCallback(statsFrame, superFunc, state)
-    print(statsFrame)
-    local superFunc = superFunc(statsFrame, state)
+function SE_statsExtendedGui:se_onClickCallback(superFunc, statsFrame, state)
+    --DebugUtil.printTableRecursively(statsFrame)
+    --print(superFunc)
+    print(state)
+    local val = superFunc(statsFrame, state)
     local value = statsFrame.subCategoryPaging.texts[state]
 
+    print("Value: ", value)
     if value ~= nil and tonumber(value) == InGameMenuStatisticsFrame.SUB_CATEGORY.STATS_EXTENDED then
         if self.screenController ~= nil then
             self.screenController:onTabOpen()
         end
 
+        --print(statsFrame)
+        DebugUtil.printTableRecursively(statsFrame, "  ", 1, 1)
         local statsExtendedLayout = statsFrame.statsExtendedLayout
-
-        -- statsFrame.statsDataElement(statsExtendedLayout)
+        -- statsFrame.statsExtendedSlider.setDataElement(statsExtendedLayout)
         FocusManager:linkElements(statsFrame.subCategoryPaging, FocusManager.TOP, statsExtendedLayout.elements[#statsExtendedLayout.elements].elements[1])
         FocusManager:linkElements(statsFrame.subCategoryPaging, FocusManager.BOTTOM, statsExtendedLayout:findFirstFocusable(true))
     end
 
-    return superFunc
+    print("Val: ", val)
+    return val
+end
+
+function SE_statsExtendedGui:se_inputEvent(statsFrame, superFunc, action, value, eventUsed)
+    local retValue = superFunc(statsFrame, action, value, eventUsed)
+    local pressedAccept = false
+    local element = FocusManager.currentFocusData.focusElement
+
+    if element ~= nil and not element.needExternalClick then
+        pressedAccept = action == InputAction.MENU_ACCEPT
+
+        if pressedAccept and not FocusManager:isFocusInputLocked(action) and element:getIsFocused() and element:getIsVisible() then
+            FocusManager.focusSystemMadeChanges = true
+            element:onFocusActivate()
+            FocusManager.focusSystemMadeChanges = false
+        end
+    end
+
+    return retValue or pressedAccept
 end
 
 function SE_statsExtendedGui.overwriteFunction(oldTarget, oldFunc, newTarget, newFunc)

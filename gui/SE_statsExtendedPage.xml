@@ -8,6 +8,7 @@
         </BoxLayout>
         <GuiElement profile="fs25_subCategorySelectorTabbedContainer" id="statsExtendedPage">
             <ScrollingLayout profile="fs25_settingsLayout" id="statsExtendedLayout">
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="Hello World!"/>
             </ScrollingLayout>
         </GuiElement>
     </GuiElement>

@@ -3,12 +3,10 @@
 -- gui extention to configure stats extended display controller
 --
 
-print("Init SE_statsExtendedGui")
 SE_statsExtendedGui = {}
 SE_statsExtendedGui._mt = Class(SE_statsExtendedGui)
 
 function SE_statsExtendedGui.new(custom_mt)
-    print("creating SE_statsExtendedGui")
     local self = setmetatable({}, custom_mt or SE_statsExtendedGui._mt)
     local statsFrame = g_inGameMenu.pageStatistics
 
@@ -19,26 +17,17 @@ function SE_statsExtendedGui.new(custom_mt)
 
     self.statsFrame = statsFrame
     self.screenController = nil
-    -- print("--- Start Table ---")
-    -- DebugUtil.printTableRecursively(statsFrame)
-    -- print("--- End Table ---")
 
     return self
 end
 
 function SE_statsExtendedGui:addPage(position)
-    -- position = math.min(#(InGameMenuStatisticsFrame.SUB_CATEGORY) + 1, position)
-    -- print("--- Start Table ---")
-    -- DebugUtil.printTableRecursively(InGameMenuStatisticsFrame)
-    -- print("--- End Table ---")
-    -- print(#(InGameMenuStatisticsFrame.SUB_CATEGORY))
-
-    print("addPage SE_statsExtendedGui")
     local screenController = SE_statsExtendedController.register()
     local statsExtendedPage = screenController.statsExtendedPage
     local statsExtendedTab = screenController.statsExtendedTab
 
     self:addElementAtPosition(statsExtendedPage, self.statsFrame.subCategoryPages[1].parent, position)
+    table.insert(self.statsFrame.subCategoryPaging.texts, position, tostring(position))
     self:addElementAtPosition(statsExtendedTab, self.statsFrame.subCategoryBox, position)
 
     table.insert(self.statsFrame.subCategoryPages, position, screenController.statsExtendedPage)
@@ -54,6 +43,7 @@ function SE_statsExtendedGui:addPage(position)
     InGameMenuStatisticsFrame.SUB_CATEGORY.STATS_EXTENDED = position
     table.insert(InGameMenuStatisticsFrame.HEADER_TITLES, position, "ui_menu_tab")
 
+    self.statsFrame.menuButtonInfo[position] = self.statsFrame.menuButtonInfoDefault
     self.statsFrame:updateAbsolutePosition()
     self.statsFrame:exposeControlsAsFields(self.statsFrame.name)
     self.statsFrame.getDescendants = function()
@@ -76,7 +66,6 @@ function SE_statsExtendedGui:addPage(position)
 end
 
 function SE_statsExtendedGui:se_onFrameOpen(frame)
-    print("onFrameOpen SE_statsExtendedGui")
     frame.isOpening = true
 
     if self.screenController ~= nil then
@@ -104,28 +93,21 @@ function SE_statsExtendedGui:addElementAtPosition(element, target, position)
 end
 
 function SE_statsExtendedGui:se_onClickCallback(superFunc, statsFrame, state)
-    --DebugUtil.printTableRecursively(statsFrame)
-    --print(superFunc)
-    print(state)
-    local val = superFunc(statsFrame, state)
-    local value = statsFrame.subCategoryPaging.texts[state]
 
-    print("Value: ", value)
-    if value ~= nil and tonumber(value) == InGameMenuStatisticsFrame.SUB_CATEGORY.STATS_EXTENDED then
+    if state == InGameMenuStatisticsFrame.SUB_CATEGORY.STATS_EXTENDED then
         if self.screenController ~= nil then
             self.screenController:onTabOpen()
         end
 
-        --print(statsFrame)
-        DebugUtil.printTableRecursively(statsFrame, "  ", 1, 1)
-        local statsExtendedLayout = statsFrame.statsExtendedLayout
+        local statsExtendedLayout = self.statsFrame.statsExtendedLayout
+
         -- statsFrame.statsExtendedSlider.setDataElement(statsExtendedLayout)
-        FocusManager:linkElements(statsFrame.subCategoryPaging, FocusManager.TOP, statsExtendedLayout.elements[#statsExtendedLayout.elements].elements[1])
-        FocusManager:linkElements(statsFrame.subCategoryPaging, FocusManager.BOTTOM, statsExtendedLayout:findFirstFocusable(true))
+        FocusManager:linkElements(statsFrame, FocusManager.TOP, statsExtendedLayout.elements[#statsExtendedLayout.elements].elements[1])
+        FocusManager:linkElements(statsFrame, FocusManager.BOTTOM, statsExtendedLayout:findFirstFocusable(true))
     end
 
-    print("Val: ", val)
-    return val
+    superFunc(statsFrame, state)
+    return nil
 end
 
 function SE_statsExtendedGui:se_inputEvent(statsFrame, superFunc, action, value, eventUsed)

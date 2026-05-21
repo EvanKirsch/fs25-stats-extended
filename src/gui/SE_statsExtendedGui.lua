@@ -50,6 +50,15 @@ function SE_statsExtendedGui:addPage(position)
         return statsExtendedPage:getDescendants()
     end
 
+    local tabPosition = position
+    local statsFrame = self.statsFrame
+    statsExtendedTab:getDescendantByName("background").getIsSelected = function()
+        return tabPosition == statsFrame.subCategoryPaging:getState()
+    end
+    statsExtendedTab.getIsSelected = function()
+        return tabPosition == statsFrame.subCategoryPaging:getState()
+    end
+
     statsExtendedPage:setTarget(self.statsFrame, statsExtendedPage.target)
     statsExtendedTab:setTarget(self.statsFrame, statsExtendedTab.target)
 

@@ -41,7 +41,8 @@ function SE_statsExtendedGui:addPage(position)
     end
 
     InGameMenuStatisticsFrame.SUB_CATEGORY.STATS_EXTENDED = position
-    table.insert(InGameMenuStatisticsFrame.HEADER_TITLES, position, "ui_menu_tab")
+    -- TODO: overwrite menu tab i18n loader to support mods
+    table.insert(InGameMenuStatisticsFrame.HEADER_TITLES, position, "ui_statistics")
 
     self.statsFrame.menuButtonInfo[position] = self.statsFrame.menuButtonInfoDefault
     self.statsFrame:updateAbsolutePosition()

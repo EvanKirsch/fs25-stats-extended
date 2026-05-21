@@ -2,7 +2,7 @@
 <GUI>
     <GuiElement profile="fs25_menuContainer">
         <BoxLayout profile="fs25_subCategorySelectorTabbedBox">
-            <Button profile="fs25_subCategorySelectorTabbedTab" id="statsExtendedTab" text="$l10n_ui_menu_tab" onClick="onClickStatsExtended">
+            <Button profile="fs25_subCategorySelectorTabbedTab" id="statsExtendedTab" text="$l10n_ui_se_menu_tab" onClick="onClickStatsExtended">
                 <ThreePartBitmap profile="fs25_subCategorySelectorTabbedTabBg" name="background"/>
             </Button>
         </BoxLayout>

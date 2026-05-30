@@ -72,6 +72,9 @@ function SE_statsExtendedGui:addPage(position)
 
     self.screenController = screenController
 
+    screenController.statsExtendedLayout:setDataSource(screenController)
+    screenController.statsExtendedLayout:setDelegate(screenController)
+
     return screenController
 end
 
@@ -111,9 +114,8 @@ function SE_statsExtendedGui:se_onClickCallback(superFunc, statsFrame, state)
 
         local statsExtendedLayout = self.statsFrame.statsExtendedLayout
 
-        -- statsFrame.statsExtendedSlider.setDataElement(statsExtendedLayout)
-        FocusManager:linkElements(statsFrame, FocusManager.TOP, statsExtendedLayout.elements[#statsExtendedLayout.elements].elements[1])
-        FocusManager:linkElements(statsFrame, FocusManager.BOTTOM, statsExtendedLayout:findFirstFocusable(true))
+        FocusManager:linkElements(statsFrame, FocusManager.TOP, statsExtendedLayout)
+        FocusManager:linkElements(statsFrame, FocusManager.BOTTOM, statsExtendedLayout)
     end
 
     superFunc(statsFrame, state)

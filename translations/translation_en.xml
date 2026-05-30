@@ -2,5 +2,8 @@
 <l10n>
     <texts>
         <text name="ui_se_menu_tab" text="Statistics Extended"/>
+        <text name="ui_se_stat_name" text="Statistic"/>
+        <text name="ui_se_stat_session" text="Session"/>
+        <text name="ui_se_stat_total" text="Total"/>
     </texts>
 </l10n>

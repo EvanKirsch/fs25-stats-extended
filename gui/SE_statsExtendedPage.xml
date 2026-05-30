@@ -7,9 +7,21 @@
             </Button>
         </BoxLayout>
         <GuiElement profile="fs25_subCategorySelectorTabbedContainer" id="statsExtendedPage">
-            <ScrollingLayout profile="fs25_settingsLayout" id="statsExtendedLayout">
-                <Text profile="fs25_settingsMultiTextOptionTitle" text="Hello World!"/>
-            </ScrollingLayout>
+            <GuiElement profile="fs25_statisticsHeaderBox">
+                <Text profile="SE_statsHeaderText" position="0px 0px" size="900px 32px" text="$l10n_ui_se_stat_name"/>
+                <Text profile="SE_statsHeaderTextRight" position="940px 0px" size="270px 32px" text="$l10n_ui_se_stat_session"/>
+                <Text profile="SE_statsHeaderTextRight" position="1240px 0px" size="270px 32px" text="$l10n_ui_se_stat_total"/>
+            </GuiElement>
+            <SmoothList id="statsExtendedLayout" size="100% 700px" position="0px 10px">
+                <ListItem profile="SE_statsListItem">
+                    <Text profile="SE_statsRowCell" position="20px 0px" size="900px 28px" name="name"/>
+                    <Text profile="SE_statsRowCellRight" position="940px 0px" size="270px 28px" name="session"/>
+                    <Text profile="SE_statsRowCellRight" position="1240px 0px" size="270px 28px" name="total"/>
+                </ListItem>
+            </SmoothList>
+            <ThreePartBitmap profile="SE_statsListSlider">
+                <Slider profile="fs25_listSlider" dataElementId="statsExtendedLayout"/>
+            </ThreePartBitmap>
         </GuiElement>
     </GuiElement>
 </GUI>

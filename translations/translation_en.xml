@@ -7,7 +7,7 @@
         <text name="ui_se_stat_progress" text="Progress (Current Game)"/>
         <text name="ui_se_stat_unlocked" text="Unlocked"/>
 
-        <text name="ui_se_achievement_CarDriving" text="Drive 100 km with cars"/>
+        <text name="ui_se_achievement_CarDriving" text="Drive 70 km with cars"/>
         <text name="ui_se_achievement_FertilizeFirst" text="Fertilize 1 hectare (2.5 acres) of soil"/>
         <text name="ui_se_achievement_Fertilize" text="Fertilize 100 hectares (250 acres) of soil"/>
         <text name="ui_se_achievement_HorseJumpsFirst" text="Jump with a horse"/>
@@ -29,7 +29,7 @@
         <text name="ui_se_achievement_BreedSheep" text="Breed 30 sheep"/>
         <text name="ui_se_achievement_BreedPigs" text="Breed 50 pigs"/>
         <text name="ui_se_achievement_BreedChicken" text="Breed 100 chickens"/>
-        <text name="ui_se_achievement_NumBeehives" text="Place 15 beehives"/>
+        <text name="ui_se_achievement_NumBeehives" text="Own 15 beehives"/>
         <text name="ui_se_achievement_BreedCows" text="Breed 20 cows"/>
         <text name="ui_se_achievement_NumDrivables" text="Own 15 drivable vehicles"/>
         <text name="ui_se_achievement_NumVehiclesSmall" text="Own 30 vehicles"/>
@@ -46,7 +46,7 @@
         <text name="ui_se_achievement_CutTreeFirst" text="Cut down 1 tree on owned land"/>
         <text name="ui_se_achievement_CutTree" text="Cut down 25 trees on owned land"/>
         <text name="ui_se_achievement_Money" text="Have 10,000,000 money in any currency"/>
-        <text name="ui_se_achievement_NumPlaceables" text="Purchase 20 placeables"/>
+        <text name="ui_se_achievement_NumPlaceables" text="Own 40 placeables"/>
         <text name="ui_se_achievement_NumProductionPoints" text="Own 10 factories"/>
         <text name="ui_se_achievement_CollectiblesUS" text="Collect all 25 parts (collectibles) on Riverbend Springs"/>
         <text name="ui_se_achievement_CollectiblesAS" text="Collect all 25 farm balls (collectibles) on Hutan Pantei"/>

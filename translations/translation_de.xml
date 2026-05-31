@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <texts>
+        <text name="ui_se_menu_tab" text="Statistiken Erweitert"/>
+        <text name="ui_se_stat_name" text="Name"/>
+        <text name="ui_se_stat_description" text="Beschreibung"/>
+        <text name="ui_se_stat_progress" text="Fortschritt (Aktuelles Spiel)"/>
+        <text name="ui_se_stat_unlocked" text="Freigeschaltet"/>
+
+        <text name="ui_se_achievement_CarDriving" text="70 km mit Autos fahren"/>
+        <text name="ui_se_achievement_FertilizeFirst" text="1 Hektar Boden düngen"/>
+        <text name="ui_se_achievement_Fertilize" text="100 Hektar Boden düngen"/>
+        <text name="ui_se_achievement_HorseJumpsFirst" text="Mit einem Pferd springen"/>
+        <text name="ui_se_achievement_HorseJumps" text="Insgesamt 500 Mal mit einem Pferd springen"/>
+        <text name="ui_se_achievement_HorseRidingFirst" text="Ein Pferd vollständig auf seine tägliche Reiteinheit reiten"/>
+        <text name="ui_se_achievement_HorseRiding" text="50 km mit Pferden reiten"/>
+        <text name="ui_se_achievement_MissionFirst" text="1 Auftrag abschließen"/>
+        <text name="ui_se_achievement_Mission" text="50 Aufträge abschließen"/>
+        <text name="ui_se_achievement_PlayTime" text="10 Stunden in einem einzigen Spielstand spielen"/>
+        <text name="ui_se_achievement_SowFirst" text="1 Hektar Boden säen"/>
+        <text name="ui_se_achievement_Sow" text="100 Hektar Boden säen"/>
+        <text name="ui_se_achievement_HarvestedFirst" text="1 Hektar Ernte einfahren"/>
+        <text name="ui_se_achievement_Harvested" text="100 Hektar Ernte einfahren"/>
+        <text name="ui_se_achievement_TractorDriving" text="150 km mit Traktoren fahren"/>
+        <text name="ui_se_achievement_TruckDriving" text="50 km mit LKWs fahren"/>
+        <text name="ui_se_achievement_VehicleRepaint" text="Ein Fahrzeug neu lackieren"/>
+        <text name="ui_se_achievement_VehicleRepairFirst" text="Ein Fahrzeug oder Gerät reparieren"/>
+        <text name="ui_se_achievement_VehicleRepair" text="Fahrzeuge oder Geräte 25 Mal reparieren"/>
+        <text name="ui_se_achievement_BreedSheep" text="30 Schafe züchten"/>
+        <text name="ui_se_achievement_BreedPigs" text="50 Schweine züchten"/>
+        <text name="ui_se_achievement_BreedChicken" text="100 Hühner züchten"/>
+        <text name="ui_se_achievement_NumBeehives" text="15 Bienenstöcke besitzen"/>
+        <text name="ui_se_achievement_BreedCows" text="20 Kühe züchten"/>
+        <text name="ui_se_achievement_NumDrivables" text="15 fahrbare Fahrzeuge besitzen"/>
+        <text name="ui_se_achievement_NumVehiclesSmall" text="30 Fahrzeuge besitzen"/>
+        <text name="ui_se_achievement_NumVehiclesLarge" text="60 Fahrzeuge besitzen"/>
+        <text name="ui_se_achievement_CultivateFirst" text="1 Hektar Boden kultivieren"/>
+        <text name="ui_se_achievement_Cultivate" text="100 Hektar Boden kultivieren"/>
+        <text name="ui_se_achievement_PetDog" text="Deinen Hund streicheln"/>
+        <text name="ui_se_achievement_WrappedBales" text="40 Grasballen pressen und wickeln"/>
+        <text name="ui_se_achievement_CottonBales" text="40 Baumwollballen verkaufen"/>
+        <text name="ui_se_achievement_DeliveryGrapes" text="85.000 Liter Weintrauben verkaufen"/>
+        <text name="ui_se_achievement_DeliveryOlives" text="60.000 Liter Oliven verkaufen"/>
+        <text name="ui_se_achievement_DeliverySorghum" text="500.000 Liter Sorghum verkaufen"/>
+        <text name="ui_se_achievement_DeliveryStones" text="100 Liter Steine verkaufen"/>
+        <text name="ui_se_achievement_CutTreeFirst" text="1 Baum auf eigenem Land fällen"/>
+        <text name="ui_se_achievement_CutTree" text="25 Bäume auf eigenem Land fällen"/>
+        <text name="ui_se_achievement_Money" text="10.000.000 Geld in einer beliebigen Währung besitzen"/>
+        <text name="ui_se_achievement_NumPlaceables" text="40 Gebäude besitzen"/>
+        <text name="ui_se_achievement_NumProductionPoints" text="10 Fabriken besitzen"/>
+        <text name="ui_se_achievement_CollectiblesUS" text="Alle 25 Teile (Sammelobjekte) auf Riverbend Springs sammeln"/>
+        <text name="ui_se_achievement_CollectiblesAS" text="Alle 25 Farmbälle (Sammelobjekte) auf Hutan Pantei sammeln"/>
+        <text name="ui_se_achievement_CollectiblesEU" text="Alle 50 goldenen Äpfel (Sammelobjekte) auf Zielonka sammeln"/>
+        <text name="ui_se_achievement_LoadedOldSavegame" text="Einen Spielstand laden, der seit 3+ Monaten nicht gespielt wurde"/>
+    </texts>
+</l10n>

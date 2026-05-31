@@ -1,16 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="105" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
+<modDesc descVersion="109" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
   <author>Evan Kirsch</author>
   <version>1.0.0.0</version>
   <title>
       <en>Statistics Extended</en>
-      <de></de>
+      <de>Erweiterte Statistiken</de>
   </title>
   <description>
     <en><![CDATA[
+Adds a new tab to the in-game Statistics screen that displays all achievements with their name, description, current progress, and current unlock status for the user.
 GitHub: https://github.com/EvanKirsch/fs25_statsExtended
 ]]></en>
     <de><![CDATA[
+Fügt dem Ingame-Statistikbildschirm ein neuer Tab hinzu, der alle Erfolge mit Namen, Beschreibung, aktuellem Fortschritt und aktuellem Freischaltstatus für den Nutzer anzeigt.
 Git-Hub: https://github.com/EvanKirsch/fs25_statsExtended
 ]]></de>
   </description>    
@@ -18,6 +20,7 @@ Git-Hub: https://github.com/EvanKirsch/fs25_statsExtended
   <l10n filenamePrefix="translations/translation" />
   <multiplayer supported="true"/>
   <extraSourceFiles>
+    <sourceFile filename="src/SE_statsExtended.lua" />
     <sourceFile filename="src/SE_statsExtended.lua" />
     <sourceFile filename="src/gui/SE_statsExtendedGui.lua" />
     <sourceFile filename="src/gui/SE_statsExtendedController.lua" />

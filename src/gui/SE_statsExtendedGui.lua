@@ -122,7 +122,7 @@ function SE_statsExtendedGui:se_onClickCallback(superFunc, statsFrame, state)
     return nil
 end
 
-function SE_statsExtendedGui:se_inputEvent(statsFrame, superFunc, action, value, eventUsed)
+function SE_statsExtendedGui:se_inputEvent(superFunc, statsFrame, action, value, eventUsed)
     local retValue = superFunc(statsFrame, action, value, eventUsed)
     local pressedAccept = false
     local element = FocusManager.currentFocusData.focusElement

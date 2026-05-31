@@ -9,7 +9,7 @@
 
     <Profile name="SE_statsListSlider" extends="fs25_listSliderBox" with="anchorTopRight">
         <position value="28px -40px"/>
-        <size value="6px 580px"/>
+        <size value="6px 680px"/>
     </Profile>
 
     <Profile name="SE_statsHeaderText" extends="baseReference">
@@ -26,6 +26,10 @@
         <textAlignment value="right"/>
     </Profile>
 
+    <Profile name="SE_statsHeaderTextCenter" extends="SE_statsHeaderText">
+        <textAlignment value="center"/>
+    </Profile>
+
     <Profile name="SE_statsRowCell" extends="baseReference" with="anchorStretchingYLeft">
         <imageColor value="0 0 0 0"/>
         <textSize value="16px"/>
@@ -37,4 +41,9 @@
     <Profile name="SE_statsRowCellRight" extends="SE_statsRowCell">
         <textAlignment value="right"/>
     </Profile>
+
+    <Profile name="SE_statsRowCellCenter" extends="SE_statsRowCell">
+        <textAlignment value="center"/>
+    </Profile>
+
 </GUIProfiles>

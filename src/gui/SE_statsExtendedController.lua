@@ -17,11 +17,8 @@ function SE_statsExtendedController.register()
 end
 
 function SE_statsExtendedController:onFrameOpen()
-    local farm = nil
-    if g_localPlayer ~= nil then
-        farm = g_farmManager:getFarmById(g_localPlayer.farmId)
-    end
-    self.statsData = farm ~= nil and farm.stats:getStatisticData() or {}
+    SE_achievementStatsUtil:populate()
+    self.statsData = SE_achievementStatsUtil.achievementStats
     self.statsExtendedLayout:reloadData()
 end
 
@@ -46,13 +43,12 @@ function SE_statsExtendedController:getTitleForSectionHeader(list, section)
 end
 
 function SE_statsExtendedController:populateCellForItemInSection(list, section, index, cell)
-    local stat = self.statsData[index]
-    print(" Popcellitem ")
-    DebugUtil.printTableRecursively(stat, "  ", 2, 2)
-    if stat == nil then return end
-    cell:getAttribute("name"):setText(stat.name)
-    cell:getAttribute("session"):setText(stat.valueSession)
-    cell:getAttribute("total"):setText(stat.valueTotal)
+    local achievement = self.statsData[index]
+    if achievement == nil then return end
+    cell:getAttribute("unlocked"):setText(achievement.unlocked)
+    cell:getAttribute("name"):setText(achievement.name)
+    cell:getAttribute("description"):setText(achievement.description)
+    cell:getAttribute("progress"):setText(achievement.score .. "/" .. achievement.targetScore)
 end
 
 function SE_statsExtendedController.new(subclass_mt)

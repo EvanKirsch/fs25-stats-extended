@@ -18,8 +18,13 @@ end
 
 function SE_statsExtendedController:onFrameOpen()
     SE_achievementStatsUtil:populate()
-    self.statsData = SE_achievementStatsUtil.achievementStats
+    self.achivementStats = SE_achievementStatsUtil.achievementStats
+
+    SE_additionalFarmStatsUtil:populate()
+    self.farmStatsData = SE_additionalFarmStatsUtil.farmStats
+
     self.statsExtendedLayout:reloadData()
+    self.farmStatsLayout:reloadData()
 end
 
 function SE_statsExtendedController:onFrameClose()
@@ -35,25 +40,34 @@ function SE_statsExtendedController:getNumberOfSections(list)
 end
 
 function SE_statsExtendedController:getNumberOfItemsInSection(list, section)
-    return self.statsData ~= nil and #self.statsData or 0
-end
-
-function SE_statsExtendedController:getTitleForSectionHeader(list, section)
-    return nil
+    if list == self.statsExtendedLayout then
+        return self.achivementStats ~= nil and #self.achivementStats or 0
+    else
+        return self.farmStatsData ~= nil and #self.farmStatsData or 0
+    end
 end
 
 function SE_statsExtendedController:populateCellForItemInSection(list, section, index, cell)
-    local achievement = self.statsData[index]
-    if achievement == nil then return end
-    cell:getAttribute("unlocked"):setText(achievement.unlocked)
-    cell:getAttribute("name"):setText(achievement.name)
-    cell:getAttribute("description"):setText(achievement.description)
-    cell:getAttribute("progress"):setText(achievement.score .. "/" .. achievement.targetScore)
+    if list == self.statsExtendedLayout then
+        local achievement = self.achivementStats[index]
+        if achievement == nil then return end
+        cell:getAttribute("unlocked"):setText(achievement.unlocked)
+        cell:getAttribute("name"):setText(achievement.name)
+        cell:getAttribute("description"):setText(achievement.description)
+        cell:getAttribute("progress"):setText(achievement.score .. "/" .. achievement.targetScore)
+    else
+        local stat = self.farmStatsData[index]
+        if stat == nil then return end
+        cell:getAttribute("name"):setText(stat.name)
+        cell:getAttribute("session"):setText(stat.session)
+        cell:getAttribute("total"):setText(stat.total)
+    end
 end
 
 function SE_statsExtendedController.new(subclass_mt)
     local self = FrameElement.new(nil, subclass_mt or SE_statsExtendedController._mt)
-    self.statsData = {}
+    self.achivementStats = {}
+    self.farmStatsData = {}
     return self
 end
 

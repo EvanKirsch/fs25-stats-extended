@@ -6,6 +6,10 @@
         <text name="ui_se_stat_description" text="Description"/>
         <text name="ui_se_stat_progress" text="Progress (Current Game)"/>
         <text name="ui_se_stat_unlocked" text="Unlocked"/>
+        <text name="ui_se_section_achievements" text="Achievements"/>
+        <text name="ui_se_section_farm_stats" text="Farm Statistics"/>
+        <text name="ui_se_stat_session" text="Session"/>
+        <text name="ui_se_stat_total" text="Total"/>
 
         <text name="ui_se_achievement_CarDriving" text="Drive 70 km with cars"/>
         <text name="ui_se_achievement_FertilizeFirst" text="Fertilize 1 hectare (2.5 acres) of soil"/>

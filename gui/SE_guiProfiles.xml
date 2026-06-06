@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GUIProfiles>
+    <Profile name="SE_statsColumnHeader" extends="baseReference" with="anchorTopStretchingX">
+        <imageColor value="0 0 0 0"/>
+    </Profile>
+
     <Profile name="SE_statsListItem" extends="baseReference" with="anchorTopStretchingX alternating">
         <height value="30px"/>
         <imageColor value="$preset_fs25_colorGrey"/>
@@ -9,7 +13,7 @@
 
     <Profile name="SE_statsListSlider" extends="fs25_listSliderBox" with="anchorTopRight">
         <position value="28px -40px"/>
-        <size value="6px 680px"/>
+        <size value="6px 618px"/>
     </Profile>
 
     <Profile name="SE_statsHeaderText" extends="baseReference">
@@ -44,6 +48,22 @@
 
     <Profile name="SE_statsRowCellCenter" extends="SE_statsRowCell">
         <textAlignment value="center"/>
+    </Profile>
+
+    <Profile name="SE_statsSectionHeader" extends="baseReference" with="anchorTopStretchingX">
+        <height value="34px"/>
+        <imageColor value="$preset_fs25_colorMain_70"/>
+    </Profile>
+
+    <Profile name="SE_statsSectionHeaderText" extends="baseReference" with="anchorStretchingXY">
+        <imageColor value="0 0 0 0"/>
+        <textSize value="16px"/>
+        <textBold value="true"/>
+        <textUpperCase value="true"/>
+        <textColor value="$preset_colorWhite"/>
+        <textDisabledColor value="$preset_colorDisabled"/>
+        <textAlignment value="left"/>
+        <textOffset value="10px 0px"/>
     </Profile>
 
 </GUIProfiles>

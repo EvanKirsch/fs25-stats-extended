@@ -6,6 +6,10 @@
         <text name="ui_se_stat_description" text="Beschreibung"/>
         <text name="ui_se_stat_progress" text="Fortschritt (Aktuelles Spiel)"/>
         <text name="ui_se_stat_unlocked" text="Freigeschaltet"/>
+        <text name="ui_se_section_achievements" text="Erfolge"/>
+        <text name="ui_se_section_farm_stats" text="Hofstatistiken"/>
+        <text name="ui_se_stat_session" text="Sitzung"/>
+        <text name="ui_se_stat_total" text="Gesamt"/>
 
         <text name="ui_se_achievement_CarDriving" text="70 km mit Autos fahren"/>
         <text name="ui_se_achievement_FertilizeFirst" text="1 Hektar Boden düngen"/>

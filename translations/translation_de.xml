@@ -64,11 +64,11 @@
         <text name="ui_se_stat_breedPigsCount" text="Gezüchtete Schweine"/>
         <text name="ui_se_stat_breedSheepCount" text="Gezüchtete Schafe"/>
         <text name="ui_se_stat_breedWaterBuffaloCount" text="Gezüchtete Wasserbüffel"/>
-        <text name="ui_se_stat_horseDistance" text="Pferdekilometer"/>
-        <text name="ui_se_stat_carDistance" text="Autokilometer"/>
-        <text name="ui_se_stat_tractorDistance" text="Traktorkilometer"/>
-        <text name="ui_se_stat_truckDistance" text="LKW-Kilometer"/>
-        <text name="ui_se_stat_traveledDistance" text="Zurückgelegte Strecke"/>
+        <text name="ui_se_stat_horseDistance" text="Pferdekilometer [km]"/>
+        <text name="ui_se_stat_carDistance" text="Autokilometer [km]"/>
+        <text name="ui_se_stat_tractorDistance" text="Traktorkilometer [km]"/>
+        <text name="ui_se_stat_truckDistance" text="LKW-Kilometer [km]"/>
+        <text name="ui_se_stat_traveledDistance" text="Zurückgelegte Strecke [km]"/>
         <text name="ui_se_stat_cultivatedHectares" text="Kultivierte Hektar"/>
         <text name="ui_se_stat_plowedHectares" text="Gepflügte Hektar"/>
         <text name="ui_se_stat_threshedHectares" text="Gedroschene Hektar"/>
@@ -84,11 +84,11 @@
         <text name="ui_se_stat_weededTime" text="Jätzeit"/>
         <text name="ui_se_stat_workedTime" text="Arbeitszeit"/>
         <text name="ui_se_stat_playTime" text="Spielzeit"/>
-        <text name="ui_se_stat_sprayUsage" text="Spritzmittelverbrauch"/>
-        <text name="ui_se_stat_seedUsage" text="Saatgutverbrauch"/>
-        <text name="ui_se_stat_fuelUsage" text="Kraftstoffverbrauch"/>
-        <text name="ui_se_stat_harvestedGrapes" text="Geerntete Weintrauben"/>
-        <text name="ui_se_stat_harvestedOlives" text="Geerntete Oliven"/>
+        <text name="ui_se_stat_sprayUsage" text="Spritzmittelverbrauch [L]"/>
+        <text name="ui_se_stat_seedUsage" text="Saatgutverbrauch [L]"/>
+        <text name="ui_se_stat_fuelUsage" text="Kraftstoffverbrauch [L]"/>
+        <text name="ui_se_stat_harvestedGrapes" text="Geerntete Weintrauben [L]"/>
+        <text name="ui_se_stat_harvestedOlives" text="Geerntete Oliven [L]"/>
         <text name="ui_se_stat_baleCount" text="Gepresste Ballen"/>
         <text name="ui_se_stat_storedBales" text="Gelagerte Ballen"/>
         <text name="ui_se_stat_wrappedBales" text="Gewickelte Ballen"/>

@@ -61,9 +61,21 @@ local STAT_NAMES = {
     "repairVehicleCount",
     "missionCount",
     "petDogCount",
+    -- Finances? These seem off
     "revenue",
     "expenses",
-    -- "treeTypesCut",
+    -- "treeTypesCut" **Not a table**, not implemented?
+}
+
+local STAT_FORMATERS = {
+    ["cultivatedTime"] = function(s) return Utils.formatTime(s) end,
+    ["plowedTime"]     = function(s) return Utils.formatTime(s) end,
+    ["threshedTime"]   = function(s) return Utils.formatTime(s) end,
+    ["sownTime"]       = function(s) return Utils.formatTime(s) end,
+    ["sprayedTime"]    = function(s) return Utils.formatTime(s) end,
+    ["weededTime"]     = function(s) return Utils.formatTime(s) end,
+    ["workedTime"]     = function(s) return Utils.formatTime(s) end,
+    ["playTime"]       = function(s) return Utils.formatTime(s) end,
 }
 
 function SE_additionalFarmStatsUtil:populate()
@@ -77,21 +89,13 @@ function SE_additionalFarmStatsUtil:populate()
 
     for _, statName in ipairs(STAT_NAMES) do
         local stat = statistics[statName]
+        local funcStatFormater = STAT_FORMATERS[statName] and STAT_FORMATERS[statName] or math.floor
         if stat ~= nil then
-            local wrapper
-            if type(stat) == "table" then
-                wrapper = {
-                    name    = g_i18n:getText("ui_se_stat_" .. statName),
-                    session = tostring(math.floor(stat.session)),
-                    total   = tostring(math.floor(stat.total)),
-                }
-            else
-                wrapper = {
-                    name    = g_i18n:getText("ui_se_stat_" .. statName),
-                    session = tostring(stat),
-                    total   = tostring(stat),
-                }
-            end
+            local wrapper = {
+                name    = g_i18n:getText("ui_se_stat_" .. statName),
+                session = tostring(funcStatFormater(stat.session)),
+                total   = tostring(funcStatFormater(stat.total)),
+            }
             table.insert(self.farmStats, wrapper)
         end
     end

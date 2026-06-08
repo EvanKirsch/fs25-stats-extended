@@ -61,15 +61,15 @@
         <text name="ui_se_stat_threshedHectares" text="Hectares Threshed"/>
         <text name="ui_se_stat_breedPigsCount" text="Pigs Bred"/>
         <text name="ui_se_stat_sownTime" text="Sowing Time"/>
-        <text name="ui_se_stat_sprayUsage" text="Spray Usage"/>
+        <text name="ui_se_stat_sprayUsage" text="Spray Usage [L]"/>
         <text name="ui_se_stat_breedChickenCount" text="Chickens Bred"/>
-        <text name="ui_se_stat_tractorDistance" text="Tractor Distance"/>
-        <text name="ui_se_stat_horseDistance" text="Horse Distance"/>
-        <text name="ui_se_stat_seedUsage" text="Seed Usage"/>
+        <text name="ui_se_stat_tractorDistance" text="Tractor Distance [km]"/>
+        <text name="ui_se_stat_horseDistance" text="Horse Distance [km]"/>
+        <text name="ui_se_stat_seedUsage" text="Seed Usage [L]"/>
         <text name="ui_se_stat_cultivatedHectares" text="Hectares Cultivated"/>
         <text name="ui_se_stat_weededHectares" text="Hectares Weeded"/>
         <text name="ui_se_stat_workersHired" text="Workers Hired"/>
-        <text name="ui_se_stat_harvestedGrapes" text="Grapes Harvested"/>
+        <text name="ui_se_stat_harvestedGrapes" text="Grapes Harvested [L]"/>
         <text name="ui_se_stat_workedHectares" text="Hectares Worked"/>
         <text name="ui_se_stat_plantedTreeCount" text="Trees Planted"/>
         <text name="ui_se_stat_storedPallets" text="Pallets Stored"/>
@@ -80,22 +80,22 @@
         <text name="ui_se_stat_windTurbineCount" text="Wind Turbines"/>
         <text name="ui_se_stat_sprayedTime" text="Spraying Time"/>
         <text name="ui_se_stat_sprayedHectares" text="Hectares Sprayed"/>
-        <text name="ui_se_stat_traveledDistance" text="Distance Traveled"/>
+        <text name="ui_se_stat_traveledDistance" text="Distance Traveled [km]"/>
         <text name="ui_se_stat_plowedTime" text="Plowing Time"/>
-        <text name="ui_se_stat_harvestedOlives" text="Olives Harvested"/>
+        <text name="ui_se_stat_harvestedOlives" text="Olives Harvested [L]"/>
         <text name="ui_se_stat_soldCottonBales" text="Cotton Bales Sold"/>
         <text name="ui_se_stat_repaintVehicleCount" text="Vehicles Repainted"/>
         <text name="ui_se_stat_breedWaterBuffaloCount" text="Water Buffalos Bred"/>
         <text name="ui_se_stat_breedCowsCount" text="Cows Bred"/>
         <text name="ui_se_stat_baleCount" text="Bales Made"/>
-        <text name="ui_se_stat_truckDistance" text="Truck Distance"/>
+        <text name="ui_se_stat_truckDistance" text="Truck Distance [km]"/>
         <text name="ui_se_stat_cutTreeCount" text="Trees Cut"/>
         <text name="ui_se_stat_repairVehicleCount" text="Vehicles Repaired"/>
-        <text name="ui_se_stat_carDistance" text="Car Distance"/>
+        <text name="ui_se_stat_carDistance" text="Car Distance [km]"/>
         <text name="ui_se_stat_breedSheepCount" text="Sheep Bred"/>
         <text name="ui_se_stat_missionCount" text="Contracts Completed"/>
         <text name="ui_se_stat_workedTime" text="Working Time"/>
-        <text name="ui_se_stat_petDogCount" text="Times Petted Dog"/>
+        <text name="ui_se_stat_petDogCount" text="Times Dog Petted"/>
         <text name="ui_se_stat_sownHectares" text="Hectares Sown"/>
         <text name="ui_se_stat_playTime" text="Play Time"/>
         <text name="ui_se_stat_woodTonsSold" text="Wood Tons Sold"/>
@@ -104,7 +104,7 @@
         <text name="ui_se_stat_storedBales" text="Bales Stored"/>
         <text name="ui_se_stat_plowedHectares" text="Hectares Plowed"/>
         <text name="ui_se_stat_treeTypesCut" text="Tree Types Cut"/>
-        <text name="ui_se_stat_fuelUsage" text="Fuel Usage"/>
+        <text name="ui_se_stat_fuelUsage" text="Fuel Usage [L]"/>
         <text name="ui_se_stat_wrappedBales" text="Bales Wrapped"/>
         <text name="ui_se_stat_weededTime" text="Weeding Time"/>
     </texts>

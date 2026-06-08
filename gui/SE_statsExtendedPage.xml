@@ -28,15 +28,15 @@
             <!-- Farm Stats (right half) -->
             <GuiElement size="450px 750px" position="1055px 0px">
                 <GuiElement profile="SE_statsColumnHeader" size="100% 32px" position="0px 0px">
-                    <Text profile="SE_statsHeaderText" position="0px 0px" size="420px 32px" text="$l10n_ui_se_section_farm_stats"/>
-                    <Text profile="SE_statsHeaderTextRight" position="180px 0px" size="140px 32px" text="$l10n_ui_se_stat_session"/>
-                    <Text profile="SE_statsHeaderTextRight" position="260px 0px" size="140px 32px" text="$l10n_ui_se_stat_total"/>
+                    <Text profile="SE_statsHeaderText" position="0px 0px" size="200px 32px" text="$l10n_ui_se_section_farm_stats"/>
+                    <Text profile="SE_statsHeaderTextRight" position="200px 0px" size="100px 32px" text="$l10n_ui_se_stat_session"/>
+                    <Text profile="SE_statsHeaderTextRight" position="300px 0px" size="150px 32px" text="$l10n_ui_se_stat_total"/>
                 </GuiElement>
                 <SmoothList id="farmStatsLayout" size="100% 678px" position="0px 42px">
                     <ListItem profile="SE_statsListItem">
-                        <Text profile="SE_statsRowCell" position="10px 0px" size="180px 28px" name="name"/>
-                        <Text profile="SE_statsRowCellRight" position="170px 0px" size="140px 28px" name="session"/>
-                        <Text profile="SE_statsRowCellRight" position="250px 0px" size="140px 28px" name="total"/>
+                        <Text profile="SE_statsRowCell" position="10px 0px" size="200px 28px" name="name"/>
+                        <Text profile="SE_statsRowCellRight" position="200px 0px" size="100px 28px" name="session"/>
+                        <Text profile="SE_statsRowCellRight" position="290px 0px" size="150px 28px" name="total"/>
                     </ListItem>
                 </SmoothList>
                 <ThreePartBitmap profile="SE_statsListSlider">

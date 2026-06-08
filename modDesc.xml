@@ -8,19 +8,22 @@
   </title>
   <description>
     <en><![CDATA[
-Adds a new tab to the in-game Statistics screen that displays all achievements with their name, description, current progress, and current unlock status for the user.
-GitHub: https://github.com/EvanKirsch/fs25_statsExtended
+Adds a new tab to the in-game Statistics screen that displays all farm stats info and achievements progress
+
+Please log issues here: https://github.com/EvanKirsch/fs25-stats-extended/issues
 ]]></en>
     <de><![CDATA[
-Fügt dem Ingame-Statistikbildschirm ein neuer Tab hinzu, der alle Erfolge mit Namen, Beschreibung, aktuellem Fortschritt und aktuellem Freischaltstatus für den Nutzer anzeigt.
-Git-Hub: https://github.com/EvanKirsch/fs25_statsExtended
+Fügt dem Ingame-Statistikbildschirm einen neuen Tab hinzu, der alle Hofstatistiken und den Fortschritt bei Erfolgen anzeigt.
+
+Probleme bitte hier melden: https://github.com/EvanKirsch/fs25-stats-extended/issues
 ]]></de>
   </description>    
   <iconFilename>icon_statsExtended.dds</iconFilename>
   <l10n filenamePrefix="translations/translation" />
   <multiplayer supported="true"/>
   <extraSourceFiles>
-    <sourceFile filename="src/SE_statsExtended.lua" />
+    <sourceFile filename="src/SE_achievementStatsUtil.lua" />
+    <sourceFile filename="src/SE_additionalFarmStatsUtil.lua" />
     <sourceFile filename="src/SE_statsExtended.lua" />
     <sourceFile filename="src/gui/SE_statsExtendedGui.lua" />
     <sourceFile filename="src/gui/SE_statsExtendedController.lua" />

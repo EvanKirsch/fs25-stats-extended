@@ -4,10 +4,10 @@
         <text name="ui_se_menu_tab" text="Statistiken Erweitert"/>
         <text name="ui_se_stat_name" text="Name"/>
         <text name="ui_se_stat_description" text="Beschreibung"/>
-        <text name="ui_se_stat_progress" text="Fortschritt (Aktuelles Spiel)"/>
+        <text name="ui_se_stat_progress" text="Fortschritt"/>
         <text name="ui_se_stat_unlocked" text="Freigeschaltet"/>
         <text name="ui_se_section_achievements" text="Erfolge"/>
-        <text name="ui_se_section_farm_stats" text="Hofstatistiken"/>
+        <text name="ui_se_section_farm_stats" text="Statistik"/>
         <text name="ui_se_stat_session" text="Sitzung"/>
         <text name="ui_se_stat_total" text="Gesamt"/>
 
@@ -52,9 +52,60 @@
         <text name="ui_se_achievement_Money" text="10.000.000 Geld in einer beliebigen Währung besitzen"/>
         <text name="ui_se_achievement_NumPlaceables" text="40 Gebäude besitzen"/>
         <text name="ui_se_achievement_NumProductionPoints" text="10 Fabriken besitzen"/>
-        <text name="ui_se_achievement_CollectiblesUS" text="Alle 25 Teile (Sammelobjekte) auf Riverbend Springs sammeln"/>
-        <text name="ui_se_achievement_CollectiblesAS" text="Alle 25 Farmbälle (Sammelobjekte) auf Hutan Pantei sammeln"/>
-        <text name="ui_se_achievement_CollectiblesEU" text="Alle 50 goldenen Äpfel (Sammelobjekte) auf Zielonka sammeln"/>
+        <text name="ui_se_achievement_CollectiblesUS" text="Alle 25 Teile auf Riverbend Springs sammeln"/>
+        <text name="ui_se_achievement_CollectiblesAS" text="Alle 25 Farmbälle auf Hutan Pantei sammeln"/>
+        <text name="ui_se_achievement_CollectiblesEU" text="Alle 50 goldenen Äpfel auf Zielonka sammeln"/>
         <text name="ui_se_achievement_LoadedOldSavegame" text="Einen Spielstand laden, der seit 3+ Monaten nicht gespielt wurde"/>
+
+        <text name="ui_se_stat_breedChickenCount" text="Gezüchtete Hühner"/>
+        <text name="ui_se_stat_breedCowsCount" text="Gezüchtete Kühe"/>
+        <text name="ui_se_stat_breedGoatsCount" text="Gezüchtete Ziegen"/>
+        <text name="ui_se_stat_breedHorsesCount" text="Gezüchtete Pferde"/>
+        <text name="ui_se_stat_breedPigsCount" text="Gezüchtete Schweine"/>
+        <text name="ui_se_stat_breedSheepCount" text="Gezüchtete Schafe"/>
+        <text name="ui_se_stat_breedWaterBuffaloCount" text="Gezüchtete Wasserbüffel"/>
+        <text name="ui_se_stat_horseDistance" text="Pferdekilometer"/>
+        <text name="ui_se_stat_carDistance" text="Autokilometer"/>
+        <text name="ui_se_stat_tractorDistance" text="Traktorkilometer"/>
+        <text name="ui_se_stat_truckDistance" text="LKW-Kilometer"/>
+        <text name="ui_se_stat_traveledDistance" text="Zurückgelegte Strecke"/>
+        <text name="ui_se_stat_cultivatedHectares" text="Kultivierte Hektar"/>
+        <text name="ui_se_stat_plowedHectares" text="Gepflügte Hektar"/>
+        <text name="ui_se_stat_threshedHectares" text="Gedroschene Hektar"/>
+        <text name="ui_se_stat_sownHectares" text="Gesäte Hektar"/>
+        <text name="ui_se_stat_sprayedHectares" text="Gespritzte Hektar"/>
+        <text name="ui_se_stat_weededHectares" text="Gejätete Hektar"/>
+        <text name="ui_se_stat_workedHectares" text="Bearbeitete Hektar"/>
+        <text name="ui_se_stat_cultivatedTime" text="Kultivierungszeit"/>
+        <text name="ui_se_stat_plowedTime" text="Pflügzeit"/>
+        <text name="ui_se_stat_threshedTime" text="Dreschzeit"/>
+        <text name="ui_se_stat_sownTime" text="Saatzeit"/>
+        <text name="ui_se_stat_sprayedTime" text="Spritzzeit"/>
+        <text name="ui_se_stat_weededTime" text="Jätzeit"/>
+        <text name="ui_se_stat_workedTime" text="Arbeitszeit"/>
+        <text name="ui_se_stat_playTime" text="Spielzeit"/>
+        <text name="ui_se_stat_sprayUsage" text="Spritzmittelverbrauch"/>
+        <text name="ui_se_stat_seedUsage" text="Saatgutverbrauch"/>
+        <text name="ui_se_stat_fuelUsage" text="Kraftstoffverbrauch"/>
+        <text name="ui_se_stat_harvestedGrapes" text="Geerntete Weintrauben"/>
+        <text name="ui_se_stat_harvestedOlives" text="Geerntete Oliven"/>
+        <text name="ui_se_stat_baleCount" text="Gepresste Ballen"/>
+        <text name="ui_se_stat_storedBales" text="Gelagerte Ballen"/>
+        <text name="ui_se_stat_wrappedBales" text="Gewickelte Ballen"/>
+        <text name="ui_se_stat_plantedTreeCount" text="Gepflanzte Bäume"/>
+        <text name="ui_se_stat_cutTreeCount" text="Gefällte Bäume"/>
+        <text name="ui_se_stat_treeTypesCut" text="Gefällte Baumarten"/>
+        <text name="ui_se_stat_woodTonsSold" text="Verkaufte Holztonnen"/>
+        <text name="ui_se_stat_workersHired" text="Eingestellte Arbeiter"/>
+        <text name="ui_se_stat_horseJumpCount" text="Pferdesprünge"/>
+        <text name="ui_se_stat_storedPallets" text="Gelagerte Paletten"/>
+        <text name="ui_se_stat_windTurbineCount" text="Windkraftanlagen"/>
+        <text name="ui_se_stat_soldCottonBales" text="Verkaufte Baumwollballen"/>
+        <text name="ui_se_stat_repaintVehicleCount" text="Umlackierte Fahrzeuge"/>
+        <text name="ui_se_stat_repairVehicleCount" text="Reparierte Fahrzeuge"/>
+        <text name="ui_se_stat_missionCount" text="Abgeschlossene Aufträge"/>
+        <text name="ui_se_stat_petDogCount" text="Hund gestreichelt"/>
+        <text name="ui_se_stat_revenue" text="Einnahmen"/>
+        <text name="ui_se_stat_expenses" text="Ausgaben"/>
     </texts>
 </l10n>

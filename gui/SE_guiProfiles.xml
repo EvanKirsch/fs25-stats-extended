@@ -13,7 +13,7 @@
 
     <Profile name="SE_statsListSlider" extends="fs25_listSliderBox" with="anchorTopRight">
         <position value="28px -40px"/>
-        <size value="6px 618px"/>
+        <size value="6px 660px"/>
     </Profile>
 
     <Profile name="SE_statsHeaderText" extends="baseReference">

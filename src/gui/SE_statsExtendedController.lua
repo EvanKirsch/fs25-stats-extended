@@ -51,10 +51,9 @@ function SE_statsExtendedController:populateCellForItemInSection(list, section, 
     if list == self.statsExtendedLayout then
         local achievement = self.achivementStats[index]
         if achievement == nil then return end
-        cell:getAttribute("unlocked"):setText(achievement.unlocked)
         cell:getAttribute("name"):setText(achievement.name)
         cell:getAttribute("description"):setText(achievement.description)
-        cell:getAttribute("progress"):setText(achievement.score .. "/" .. achievement.targetScore)
+        cell:getAttribute("progress"):setText(achievement.progress)
     else
         local stat = self.farmStatsData[index]
         if stat == nil then return end
@@ -63,6 +62,7 @@ function SE_statsExtendedController:populateCellForItemInSection(list, section, 
         cell:getAttribute("total"):setText(stat.total)
     end
 end
+
 
 function SE_statsExtendedController.new(subclass_mt)
     local self = FrameElement.new(nil, subclass_mt or SE_statsExtendedController._mt)

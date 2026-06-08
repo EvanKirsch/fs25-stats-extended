@@ -48,54 +48,6 @@ local SCORE_BY_ID = {
     -- LoadedOldSavegame (not implemented)
 }
 
-local DETAILS_BY_ID = {
-    ["CarDriving"]          = "ui_se_achievement_CarDriving",
-    ["FertilizeFirst"]      = "ui_se_achievement_FertilizeFirst",
-    ["Fertilize"]           = "ui_se_achievement_Fertilize",
-    ["HorseJumpsFirst"]     = "ui_se_achievement_HorseJumpsFirst",
-    ["HorseJumps"]          = "ui_se_achievement_HorseJumps",
-    ["HorseRidingFirst"]    = "ui_se_achievement_HorseRidingFirst",
-    ["HorseRiding"]         = "ui_se_achievement_HorseRiding",
-    ["MissionFirst"]        = "ui_se_achievement_MissionFirst",
-    ["Mission"]             = "ui_se_achievement_Mission",
-    ["PlayTime"]            = "ui_se_achievement_PlayTime",
-    ["SowFirst"]            = "ui_se_achievement_SowFirst",
-    ["Sow"]                 = "ui_se_achievement_Sow",
-    ["HarvestedFirst"]      = "ui_se_achievement_HarvestedFirst",
-    ["Harvested"]           = "ui_se_achievement_Harvested",
-    ["TractorDriving"]      = "ui_se_achievement_TractorDriving",
-    ["TruckDriving"]        = "ui_se_achievement_TruckDriving",
-    ["VehicleRepaint"]      = "ui_se_achievement_VehicleRepaint",
-    ["VehicleRepairFirst"]  = "ui_se_achievement_VehicleRepairFirst",
-    ["VehicleRepair"]       = "ui_se_achievement_VehicleRepair",
-    ["BreedSheep"]          = "ui_se_achievement_BreedSheep",
-    ["BreedPigs"]           = "ui_se_achievement_BreedPigs",
-    ["BreedChicken"]        = "ui_se_achievement_BreedChicken",
-    ["NumBeehives"]         = "ui_se_achievement_NumBeehives",
-    ["BreedCows"]           = "ui_se_achievement_BreedCows",
-    ["NumDrivables"]        = "ui_se_achievement_NumDrivables",
-    ["NumVehiclesSmall"]    = "ui_se_achievement_NumVehiclesSmall",
-    ["NumVehiclesLarge"]    = "ui_se_achievement_NumVehiclesLarge",
-    ["CultivateFirst"]      = "ui_se_achievement_CultivateFirst",
-    ["Cultivate"]           = "ui_se_achievement_Cultivate",
-    ["PetDog"]              = "ui_se_achievement_PetDog",
-    ["WrappedBales"]        = "ui_se_achievement_WrappedBales",
-    ["CottonBales"]         = "ui_se_achievement_CottonBales",
-    ["DeliveryGrapes"]      = "ui_se_achievement_DeliveryGrapes",
-    ["DeliveryOlives"]      = "ui_se_achievement_DeliveryOlives",
-    ["DeliverySorghum"]     = "ui_se_achievement_DeliverySorghum",
-    ["DeliveryStones"]      = "ui_se_achievement_DeliveryStones",
-    ["CutTreeFirst"]        = "ui_se_achievement_CutTreeFirst",
-    ["CutTree"]             = "ui_se_achievement_CutTree",
-    ["Money"]               = "ui_se_achievement_Money",
-    ["NumPlaceables"]       = "ui_se_achievement_NumPlaceables",
-    ["NumProductionPoints"] = "ui_se_achievement_NumProductionPoints",
-    ["CollectiblesUS"]      = "ui_se_achievement_CollectiblesUS",
-    ["CollectiblesAS"]      = "ui_se_achievement_CollectiblesAS",
-    ["CollectiblesEU"]      = "ui_se_achievement_CollectiblesEU",
-    ["LoadedOldSavegame"]   = "ui_se_achievement_LoadedOldSavegame",
-}
-
 function SE_achievementStatsUtil:populate()
     self.achievementStats = {}
 
@@ -124,15 +76,18 @@ function SE_achievementStatsUtil:populate()
 
         local achievementWrapper = {
             ["idName"]      = achievement.idName,
-            ["unlocked"]    = achievement.unlocked and g_i18n:getText("ui_yes") or g_i18n:getText("ui_no"),
             ["name"]        = achievement.name,
-            ["description"] = DETAILS_BY_ID[achievement.idName] ~= nil and g_i18n:getText(DETAILS_BY_ID[achievement.idName]) or "",
-            ["score"]       = tostring(math.floor(currentScore) or 0),
-            ["targetScore"] = tostring(achievement.targetScore or 0),
-            ["showScore"]   = tostring(achievement.showScore or 0)
+            ["description"] = g_i18n:getText("ui_se_achievement_" .. achievement.idName),
+            ["progress"]    = SE_achievementStatsUtil:getProgress(achievement, currentScore)
         }
         table.insert(self.achievementStats, achievementWrapper)
     end
+end
+
+function SE_achievementStatsUtil:getProgress(achievement, currentScore)
+    local strLocked = tostring(math.floor(currentScore) or 0) .. "/" .. tostring(achievement.targetScore or 0)
+    local strUnlocked = g_i18n:getText("ui_se_stat_unlocked")
+    return achievement.unlocked and strUnlocked or strLocked
 end
 
 function SE_achievementStatsUtil:getBeehives(farmId)

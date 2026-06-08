@@ -8,19 +8,17 @@
         </BoxLayout>
         <GuiElement profile="fs25_subCategorySelectorTabbedContainer" id="statsExtendedPage">
             <!-- Achievements (left half) -->
-            <GuiElement size="700px 700px" position="0px 0px">
+            <GuiElement size="1000px 750px" position="0px 0px">
                 <GuiElement profile="SE_statsColumnHeader" size="100% 32px" position="0px 0px">
-                    <Text profile="SE_statsHeaderTextCenter" position="0px 0px" size="80px 32px" text="$l10n_ui_se_stat_unlocked"/>
-                    <Text profile="SE_statsHeaderText" position="80px 0px" size="200px 32px" text="$l10n_ui_se_stat_name"/>
-                    <Text profile="SE_statsHeaderText" position="280px 0px" size="330px 32px" text="$l10n_ui_se_stat_description"/>
-                    <Text profile="SE_statsHeaderTextRight" position="610px 0px" size="90px 32px" text="$l10n_ui_se_stat_progress"/>
+                    <Text profile="SE_statsHeaderText" position="0px 0px" size="280px 32px" text="$l10n_ui_se_stat_name"/>
+                    <Text profile="SE_statsHeaderText" position="280px 0px" size="530px 32px" text="$l10n_ui_se_stat_description"/>
+                    <Text profile="SE_statsHeaderTextRight" position="810px 0px" size="190px 32px" text="$l10n_ui_se_stat_progress"/>
                 </GuiElement>
-                <SmoothList id="statsExtendedLayout" size="100% 658px" position="0px 42px">
+                <SmoothList id="statsExtendedLayout" size="100% 678px" position="0px 42px">
                     <ListItem profile="SE_statsListItem">
-                        <Text profile="SE_statsRowCellCenter" position="0px 0px" size="80px 28px" name="unlocked"/>
-                        <Text profile="SE_statsRowCell" position="80px 0px" size="200px 28px" name="name"/>
-                        <Text profile="SE_statsRowCell" position="280px 0px" size="330px 28px" name="description"/>
-                        <Text profile="SE_statsRowCellRight" position="610px 0px" size="90px 28px" name="progress"/>
+                        <Text profile="SE_statsRowCell" position="10px 0px" size="280px 28px" name="name"/>
+                        <Text profile="SE_statsRowCell" position="280px 0px" size="530px 28px" name="description"/>
+                        <Text profile="SE_statsRowCellRight" position="800px 0px" size="190px 28px" name="progress"/>
                     </ListItem>
                 </SmoothList>
                 <ThreePartBitmap profile="SE_statsListSlider">
@@ -28,17 +26,17 @@
                 </ThreePartBitmap>
             </GuiElement>
             <!-- Farm Stats (right half) -->
-            <GuiElement size="700px 700px" position="755px 0px">
+            <GuiElement size="400px 750px" position="1055px 0px">
                 <GuiElement profile="SE_statsColumnHeader" size="100% 32px" position="0px 0px">
                     <Text profile="SE_statsHeaderText" position="0px 0px" size="420px 32px" text="$l10n_ui_se_section_farm_stats"/>
-                    <Text profile="SE_statsHeaderText" position="420px 0px" size="140px 32px" text="$l10n_ui_se_stat_session"/>
-                    <Text profile="SE_statsHeaderTextRight" position="560px 0px" size="140px 32px" text="$l10n_ui_se_stat_total"/>
+                    <Text profile="SE_statsHeaderTextRight" position="180px 0px" size="140px 32px" text="$l10n_ui_se_stat_session"/>
+                    <Text profile="SE_statsHeaderTextRight" position="260px 0px" size="140px 32px" text="$l10n_ui_se_stat_total"/>
                 </GuiElement>
-                <SmoothList id="farmStatsLayout" size="100% 658px" position="0px 42px">
+                <SmoothList id="farmStatsLayout" size="100% 678px" position="0px 42px">
                     <ListItem profile="SE_statsListItem">
-                        <Text profile="SE_statsRowCell" position="0px 0px" size="420px 28px" name="name"/>
-                        <Text profile="SE_statsRowCell" position="420px 0px" size="140px 28px" name="session"/>
-                        <Text profile="SE_statsRowCellRight" position="560px 0px" size="140px 28px" name="total"/>
+                        <Text profile="SE_statsRowCell" position="10px 0px" size="180px 28px" name="name"/>
+                        <Text profile="SE_statsRowCellRight" position="170px 0px" size="140px 28px" name="session"/>
+                        <Text profile="SE_statsRowCellRight" position="250px 0px" size="140px 28px" name="total"/>
                     </ListItem>
                 </SmoothList>
                 <ThreePartBitmap profile="SE_statsListSlider">

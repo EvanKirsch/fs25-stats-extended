@@ -7,6 +7,7 @@ SE_statsExtended.dir = g_currentModDirectory
 source(SE_statsExtended.dir .. "src/gui/SE_statsExtendedGui.lua")
 source(SE_statsExtended.dir .. "src/gui/SE_statsExtendedController.lua")
 source(SE_statsExtended.dir .. "src/SE_achievementStatsUtil.lua")
+source(SE_statsExtended.dir .. "src/SE_additionalFarmStatsUtil.lua")
 
 function SE_statsExtended:loadMap()
     local gui = SE_statsExtendedGui.new()

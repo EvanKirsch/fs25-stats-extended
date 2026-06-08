@@ -74,6 +74,8 @@ function SE_statsExtendedGui:addPage(position)
 
     screenController.statsExtendedLayout:setDataSource(screenController)
     screenController.statsExtendedLayout:setDelegate(screenController)
+    screenController.farmStatsLayout:setDataSource(screenController)
+    screenController.farmStatsLayout:setDelegate(screenController)
 
     return screenController
 end

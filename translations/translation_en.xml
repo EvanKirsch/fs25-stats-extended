@@ -4,23 +4,27 @@
         <text name="ui_se_menu_tab" text="Statistics Extended"/>
         <text name="ui_se_stat_name" text="Name"/>
         <text name="ui_se_stat_description" text="Description"/>
-        <text name="ui_se_stat_progress" text="Progress (Current Game)"/>
+        <text name="ui_se_stat_progress" text="Progress"/>
         <text name="ui_se_stat_unlocked" text="Unlocked"/>
+        <text name="ui_se_section_achievements" text="Achievements"/>
+        <text name="ui_se_section_farm_stats" text="Statistic"/>
+        <text name="ui_se_stat_session" text="Session"/>
+        <text name="ui_se_stat_total" text="Total"/>
 
         <text name="ui_se_achievement_CarDriving" text="Drive 70 km with cars"/>
-        <text name="ui_se_achievement_FertilizeFirst" text="Fertilize 1 hectare (2.5 acres) of soil"/>
-        <text name="ui_se_achievement_Fertilize" text="Fertilize 100 hectares (250 acres) of soil"/>
+        <text name="ui_se_achievement_FertilizeFirst" text="Fertilize 1 hectare of soil"/>
+        <text name="ui_se_achievement_Fertilize" text="Fertilize 100 hectares of soil"/>
         <text name="ui_se_achievement_HorseJumpsFirst" text="Jump with a horse"/>
         <text name="ui_se_achievement_HorseJumps" text="Jump with a horse a total of 500 times"/>
         <text name="ui_se_achievement_HorseRidingFirst" text="Fully ride a horse to its 100% daily ride"/>
-        <text name="ui_se_achievement_HorseRiding" text="Ride horses for 50 km (31 miles)"/>
+        <text name="ui_se_achievement_HorseRiding" text="Ride horses for 50 km"/>
         <text name="ui_se_achievement_MissionFirst" text="Complete 1 contract"/>
         <text name="ui_se_achievement_Mission" text="Complete 50 contracts"/>
         <text name="ui_se_achievement_PlayTime" text="Play 10 hours in a single savegame"/>
-        <text name="ui_se_achievement_SowFirst" text="Sow 1 hectare (2.5 acres) of soil"/>
-        <text name="ui_se_achievement_Sow" text="Sow 100 hectares (250 acres) of soil"/>
-        <text name="ui_se_achievement_HarvestedFirst" text="Harvest 1 hectare (2.5 acres) of crops"/>
-        <text name="ui_se_achievement_Harvested" text="Harvest 100 hectares (250 acres) of crops"/>
+        <text name="ui_se_achievement_SowFirst" text="Sow 1 hectare of soil"/>
+        <text name="ui_se_achievement_Sow" text="Sow 100 hectares of soil"/>
+        <text name="ui_se_achievement_HarvestedFirst" text="Harvest 1 hectare of crops"/>
+        <text name="ui_se_achievement_Harvested" text="Harvest 100 hectares of crops"/>
         <text name="ui_se_achievement_TractorDriving" text="Drive 150 km with tractors"/>
         <text name="ui_se_achievement_TruckDriving" text="Drive 50 km with trucks"/>
         <text name="ui_se_achievement_VehicleRepaint" text="Repaint a vehicle"/>
@@ -34,8 +38,8 @@
         <text name="ui_se_achievement_NumDrivables" text="Own 15 drivable vehicles"/>
         <text name="ui_se_achievement_NumVehiclesSmall" text="Own 30 vehicles"/>
         <text name="ui_se_achievement_NumVehiclesLarge" text="Own 60 vehicles"/>
-        <text name="ui_se_achievement_CultivateFirst" text="Cultivate 1 hectare (2.5 acres) of soil"/>
-        <text name="ui_se_achievement_Cultivate" text="Cultivate 100 hectares (250 acres) of soil"/>
+        <text name="ui_se_achievement_CultivateFirst" text="Cultivate 1 hectare of soil"/>
+        <text name="ui_se_achievement_Cultivate" text="Cultivate 100 hectares of soil"/>
         <text name="ui_se_achievement_PetDog" text="Pet your dog"/>
         <text name="ui_se_achievement_WrappedBales" text="Bale and wrap 40 grass bales"/>
         <text name="ui_se_achievement_CottonBales" text="Sell 40 cotton bales"/>
@@ -48,9 +52,60 @@
         <text name="ui_se_achievement_Money" text="Have 10,000,000 money in any currency"/>
         <text name="ui_se_achievement_NumPlaceables" text="Own 40 placeables"/>
         <text name="ui_se_achievement_NumProductionPoints" text="Own 10 factories"/>
-        <text name="ui_se_achievement_CollectiblesUS" text="Collect all 25 parts (collectibles) on Riverbend Springs"/>
-        <text name="ui_se_achievement_CollectiblesAS" text="Collect all 25 farm balls (collectibles) on Hutan Pantei"/>
-        <text name="ui_se_achievement_CollectiblesEU" text="Collect all 50 golden apples (collectibles) on Zielonka"/>
+        <text name="ui_se_achievement_CollectiblesUS" text="Collect all 25 parts on Riverbend Springs"/>
+        <text name="ui_se_achievement_CollectiblesAS" text="Collect all 25 farm balls on Hutan Pantei"/>
+        <text name="ui_se_achievement_CollectiblesEU" text="Collect all 50 golden apples on Zielonka"/>
         <text name="ui_se_achievement_LoadedOldSavegame" text="Load a savegame that has not been played in 3+ months"/>
+
+        <text name="ui_se_stat_breedHorsesCount" text="Horses Bred"/>
+        <text name="ui_se_stat_threshedHectares" text="Hectares Threshed"/>
+        <text name="ui_se_stat_breedPigsCount" text="Pigs Bred"/>
+        <text name="ui_se_stat_sownTime" text="Sowing Time"/>
+        <text name="ui_se_stat_sprayUsage" text="Spray Usage"/>
+        <text name="ui_se_stat_breedChickenCount" text="Chickens Bred"/>
+        <text name="ui_se_stat_tractorDistance" text="Tractor Distance"/>
+        <text name="ui_se_stat_horseDistance" text="Horse Distance"/>
+        <text name="ui_se_stat_seedUsage" text="Seed Usage"/>
+        <text name="ui_se_stat_cultivatedHectares" text="Hectares Cultivated"/>
+        <text name="ui_se_stat_weededHectares" text="Hectares Weeded"/>
+        <text name="ui_se_stat_workersHired" text="Workers Hired"/>
+        <text name="ui_se_stat_harvestedGrapes" text="Grapes Harvested"/>
+        <text name="ui_se_stat_workedHectares" text="Hectares Worked"/>
+        <text name="ui_se_stat_plantedTreeCount" text="Trees Planted"/>
+        <text name="ui_se_stat_storedPallets" text="Pallets Stored"/>
+        <text name="ui_se_stat_threshedTime" text="Threshing Time"/>
+        <text name="ui_se_stat_cultivatedTime" text="Cultivation Time"/>
+        <text name="ui_se_stat_breedGoatsCount" text="Goats Bred"/>
+        <text name="ui_se_stat_expenses" text="Expenses"/>
+        <text name="ui_se_stat_windTurbineCount" text="Wind Turbines"/>
+        <text name="ui_se_stat_sprayedTime" text="Spraying Time"/>
+        <text name="ui_se_stat_sprayedHectares" text="Hectares Sprayed"/>
+        <text name="ui_se_stat_traveledDistance" text="Distance Traveled"/>
+        <text name="ui_se_stat_plowedTime" text="Plowing Time"/>
+        <text name="ui_se_stat_harvestedOlives" text="Olives Harvested"/>
+        <text name="ui_se_stat_soldCottonBales" text="Cotton Bales Sold"/>
+        <text name="ui_se_stat_repaintVehicleCount" text="Vehicles Repainted"/>
+        <text name="ui_se_stat_breedWaterBuffaloCount" text="Water Buffalos Bred"/>
+        <text name="ui_se_stat_breedCowsCount" text="Cows Bred"/>
+        <text name="ui_se_stat_baleCount" text="Bales Made"/>
+        <text name="ui_se_stat_truckDistance" text="Truck Distance"/>
+        <text name="ui_se_stat_cutTreeCount" text="Trees Cut"/>
+        <text name="ui_se_stat_repairVehicleCount" text="Vehicles Repaired"/>
+        <text name="ui_se_stat_carDistance" text="Car Distance"/>
+        <text name="ui_se_stat_breedSheepCount" text="Sheep Bred"/>
+        <text name="ui_se_stat_missionCount" text="Contracts Completed"/>
+        <text name="ui_se_stat_workedTime" text="Working Time"/>
+        <text name="ui_se_stat_petDogCount" text="Times Petted Dog"/>
+        <text name="ui_se_stat_sownHectares" text="Hectares Sown"/>
+        <text name="ui_se_stat_playTime" text="Play Time"/>
+        <text name="ui_se_stat_woodTonsSold" text="Wood Tons Sold"/>
+        <text name="ui_se_stat_revenue" text="Revenue"/>
+        <text name="ui_se_stat_horseJumpCount" text="Horse Jumps"/>
+        <text name="ui_se_stat_storedBales" text="Bales Stored"/>
+        <text name="ui_se_stat_plowedHectares" text="Hectares Plowed"/>
+        <text name="ui_se_stat_treeTypesCut" text="Tree Types Cut"/>
+        <text name="ui_se_stat_fuelUsage" text="Fuel Usage"/>
+        <text name="ui_se_stat_wrappedBales" text="Bales Wrapped"/>
+        <text name="ui_se_stat_weededTime" text="Weeding Time"/>
     </texts>
 </l10n>

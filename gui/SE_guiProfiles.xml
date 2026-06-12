@@ -55,7 +55,7 @@
         <imageColor value="$preset_fs25_colorMain_70"/>
     </Profile>
 
-    <Profile name="SE_statsSectionHeaderText" extends="baseReference" with="anchorStretchingXY">
+    <Profile name="SE_statsSectionHeaderText" extends="baseReference" with="anchorTopStretchingX">
         <imageColor value="0 0 0 0"/>
         <textSize value="16px"/>
         <textBold value="true"/>

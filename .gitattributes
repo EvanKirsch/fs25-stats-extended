@@ -9,3 +9,4 @@ LICENSE export-ignore
 /screenshots export-ignore
 /dataS export-ignore
 /.claude export-ignore
+/.github export-ignore

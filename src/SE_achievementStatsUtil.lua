@@ -85,7 +85,7 @@ function SE_achievementStatsUtil:populate()
 end
 
 function SE_achievementStatsUtil:getProgress(achievement, currentScore)
-    local strLocked = tostring(math.floor(currentScore) or 0) .. "/" .. tostring(achievement.targetScore or 0)
+    local strLocked = tostring(math.floor(currentScore or 0)) .. "/" .. tostring(achievement.targetScore or 0)
     local strUnlocked = g_i18n:getText("ui_se_stat_unlocked")
     return achievement.unlocked and strUnlocked or strLocked
 end

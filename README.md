@@ -19,8 +19,8 @@ Displays all achievements registered with `g_achievementManager`.
 Displays raw farm stats from the active save, covers breeding counts, distances traveled, field area worked, time spent on tasks, resource usage, harvests, bales, wood, and more. Some of these are duplicated from the existing "Statistics" tab
 
 ## :gear: Manual Install Instructions
-1. Download `FS25_statsExtended.zip` from the latest release on the [releases page](https://github.com/EvanKirsch/fs25-stats-extended/releases)
-2. Move your downloaded copy of `FS25_statsExtended.zip` to `Documents\My Games\Farming Simulator 2025\mods`
+1. Download `FS25_StatsExtended_update.zip` from the latest release on the [releases page](https://github.com/EvanKirsch/fs25-stats-extended/releases)
+2. Move your downloaded copy of `FS25_StatsExtended_update.zip` to `Documents\My Games\Farming Simulator 2025\mods`
 
 ## :hammer_and_wrench: Manual Build Instructions
-`git archive -o FS25_statsExtended.zip HEAD`
+`git archive -o FS25_StatsExtended.zip HEAD`

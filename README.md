@@ -24,3 +24,11 @@ Displays raw farm stats from the active save, covers breeding counts, distances 
 
 ## :hammer_and_wrench: Manual Build Instructions
 `git archive -o FS25_StatsExtended.zip HEAD`
+
+## :rocket: Release
+Create and push a tag on the desired release commit following the pattern `[0-9]+.[0-9]+.[0-9]+.[0-9]+`
+
+```bash
+git tag <tagname>
+git push origin <tagname>
+```

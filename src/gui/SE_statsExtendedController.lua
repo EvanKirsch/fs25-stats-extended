@@ -18,7 +18,7 @@ end
 
 function SE_statsExtendedController:onFrameOpen()
     SE_achievementStatsUtil:populate()
-    self.achivementStats = SE_achievementStatsUtil.achievementStats
+    self.achievementStats = SE_achievementStatsUtil.achievementStats
 
     SE_additionalFarmStatsUtil:populate()
     self.farmStatsData = SE_additionalFarmStatsUtil.farmStats
@@ -41,7 +41,7 @@ end
 
 function SE_statsExtendedController:getNumberOfItemsInSection(list, section)
     if list == self.statsExtendedLayout then
-        return self.achivementStats ~= nil and #self.achivementStats or 0
+        return self.achievementStats ~= nil and #self.achievementStats or 0
     else
         return self.farmStatsData ~= nil and #self.farmStatsData or 0
     end
@@ -49,7 +49,7 @@ end
 
 function SE_statsExtendedController:populateCellForItemInSection(list, section, index, cell)
     if list == self.statsExtendedLayout then
-        local achievement = self.achivementStats[index]
+        local achievement = self.achievementStats[index]
         if achievement == nil then return end
         cell:getAttribute("name"):setText(achievement.name)
         cell:getAttribute("description"):setText(achievement.description)
@@ -66,7 +66,7 @@ end
 
 function SE_statsExtendedController.new(subclass_mt)
     local self = FrameElement.new(nil, subclass_mt or SE_statsExtendedController._mt)
-    self.achivementStats = {}
+    self.achievementStats = {}
     self.farmStatsData = {}
     return self
 end

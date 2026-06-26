@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <texts>
+        <text name="ui_se_menu_tab" text="Statistiche Estese"/>
+        <text name="ui_se_stat_name" text="Nome"/>
+        <text name="ui_se_stat_description" text="Descrizione"/>
+        <text name="ui_se_stat_progress" text="Progresso"/>
+        <text name="ui_se_stat_unlocked" text="Sbloccato"/>
+        <text name="ui_se_section_achievements" text="Obiettivi"/>
+        <text name="ui_se_section_farm_stats" text="Statistica"/>
+        <text name="ui_se_stat_session" text="Sessione"/>
+        <text name="ui_se_stat_total" text="Totale"/>
+
+        <text name="ui_se_achievement_CarDriving" text="Percorri 70 km con le auto"/>
+        <text name="ui_se_achievement_FertilizeFirst" text="Fertilizza 1 ettaro di terreno"/>
+        <text name="ui_se_achievement_Fertilize" text="Fertilizza 100 ettari di terreno"/>
+        <text name="ui_se_achievement_HorseJumpsFirst" text="Salta con un cavallo"/>
+        <text name="ui_se_achievement_HorseJumps" text="Salta con un cavallo per un totale di 500 volte"/>
+        <text name="ui_se_achievement_HorseRidingFirst" text="Porta un cavallo al 100% della cavalcata giornaliera"/>
+        <text name="ui_se_achievement_HorseRiding" text="Cavalca i cavalli per 50 km"/>
+        <text name="ui_se_achievement_MissionFirst" text="Completa 1 contratto"/>
+        <text name="ui_se_achievement_Mission" text="Completa 50 contratti"/>
+        <text name="ui_se_achievement_PlayTime" text="Gioca 10 ore in un singolo salvataggio"/>
+        <text name="ui_se_achievement_SowFirst" text="Semina 1 ettaro di terreno"/>
+        <text name="ui_se_achievement_Sow" text="Semina 100 ettari di terreno"/>
+        <text name="ui_se_achievement_HarvestedFirst" text="Raccogli 1 ettaro di colture"/>
+        <text name="ui_se_achievement_Harvested" text="Raccogli 100 ettari di colture"/>
+        <text name="ui_se_achievement_TractorDriving" text="Percorri 150 km con i trattori"/>
+        <text name="ui_se_achievement_TruckDriving" text="Percorri 50 km con i camion"/>
+        <text name="ui_se_achievement_VehicleRepaint" text="Ridipingi un veicolo"/>
+        <text name="ui_se_achievement_VehicleRepairFirst" text="Ripara un veicolo o un attrezzo"/>
+        <text name="ui_se_achievement_VehicleRepair" text="Ripara veicoli o attrezzi 25 volte"/>
+        <text name="ui_se_achievement_BreedSheep" text="Alleva 30 pecore"/>
+        <text name="ui_se_achievement_BreedPigs" text="Alleva 50 maiali"/>
+        <text name="ui_se_achievement_BreedChicken" text="Alleva 100 galline"/>
+        <text name="ui_se_achievement_NumBeehives" text="Possiedi 15 arnie"/>
+        <text name="ui_se_achievement_BreedCows" text="Alleva 20 mucche"/>
+        <text name="ui_se_achievement_NumDrivables" text="Possiedi 15 veicoli guidabili"/>
+        <text name="ui_se_achievement_NumVehiclesSmall" text="Possiedi 30 veicoli"/>
+        <text name="ui_se_achievement_NumVehiclesLarge" text="Possiedi 60 veicoli"/>
+        <text name="ui_se_achievement_CultivateFirst" text="Coltiva 1 ettaro di terreno"/>
+        <text name="ui_se_achievement_Cultivate" text="Coltiva 100 ettari di terreno"/>
+        <text name="ui_se_achievement_PetDog" text="Accarezza il tuo cane"/>
+        <text name="ui_se_achievement_WrappedBales" text="Pressa e avvolgi 40 rotoballe di erba"/>
+        <text name="ui_se_achievement_CottonBales" text="Vendi 40 balle di cotone"/>
+        <text name="ui_se_achievement_DeliveryGrapes" text="Vendi 85.000 L di uva"/>
+        <text name="ui_se_achievement_DeliveryOlives" text="Vendi 60.000 L di olive"/>
+        <text name="ui_se_achievement_DeliverySorghum" text="Vendi 500.000 L di sorgo"/>
+        <text name="ui_se_achievement_DeliveryStones" text="Vendi 100 L di pietre"/>
+        <text name="ui_se_achievement_CutTreeFirst" text="Abbatti 1 albero su terreno di proprietà"/>
+        <text name="ui_se_achievement_CutTree" text="Abbatti 25 alberi su terreno di proprietà"/>
+        <text name="ui_se_achievement_Money" text="Possiedi 10.000.000 di denaro in qualsiasi valuta"/>
+        <text name="ui_se_achievement_NumPlaceables" text="Possiedi 40 oggetti piazzabili"/>
+        <text name="ui_se_achievement_NumProductionPoints" text="Possiedi 10 fabbriche"/>
+        <text name="ui_se_achievement_CollectiblesUS" text="Raccogli tutti i 25 pezzi a Riverbend Springs"/>
+        <text name="ui_se_achievement_CollectiblesAS" text="Raccogli tutte le 25 farm ball a Hutan Pantei"/>
+        <text name="ui_se_achievement_CollectiblesEU" text="Raccogli tutte le 50 mele d'oro a Zielonka"/>
+        <text name="ui_se_achievement_LoadedOldSavegame" text="Carica un salvataggio non giocato da 3 o più mesi"/>
+
+        <text name="ui_se_stat_breedHorsesCount" text="Cavalli Allevati"/>
+        <text name="ui_se_stat_threshedHectares" text="Ettari Trebbiati"/>
+        <text name="ui_se_stat_breedPigsCount" text="Maiali Allevati"/>
+        <text name="ui_se_stat_sownTime" text="Tempo di Semina"/>
+        <text name="ui_se_stat_sprayUsage" text="Uso Irroratrice [L]"/>
+        <text name="ui_se_stat_breedChickenCount" text="Galline Allevate"/>
+        <text name="ui_se_stat_tractorDistance" text="Distanza Trattore [km]"/>
+        <text name="ui_se_stat_horseDistance" text="Distanza Cavallo [km]"/>
+        <text name="ui_se_stat_seedUsage" text="Uso Sementi [L]"/>
+        <text name="ui_se_stat_cultivatedHectares" text="Ettari Coltivati"/>
+        <text name="ui_se_stat_weededHectares" text="Ettari Diserbo"/>
+        <text name="ui_se_stat_workersHired" text="Lavoratori Assunti"/>
+        <text name="ui_se_stat_harvestedGrapes" text="Uva Raccolta [L]"/>
+        <text name="ui_se_stat_workedHectares" text="Ettari Lavorati"/>
+        <text name="ui_se_stat_plantedTreeCount" text="Alberi Piantati"/>
+        <text name="ui_se_stat_storedPallets" text="Pallet Stoccati"/>
+        <text name="ui_se_stat_threshedTime" text="Tempo di Trebbiatura"/>
+        <text name="ui_se_stat_cultivatedTime" text="Tempo di Coltivazione"/>
+        <text name="ui_se_stat_breedGoatsCount" text="Capre Allevate"/>
+        <text name="ui_se_stat_expenses" text="Spese"/>
+        <text name="ui_se_stat_windTurbineCount" text="Turbine Eoliche"/>
+        <text name="ui_se_stat_sprayedTime" text="Tempo di Irrorazione"/>
+        <text name="ui_se_stat_sprayedHectares" text="Ettari Irrorati"/>
+        <text name="ui_se_stat_traveledDistance" text="Distanza Percorsa [km]"/>
+        <text name="ui_se_stat_plowedTime" text="Tempo di Aratura"/>
+        <text name="ui_se_stat_harvestedOlives" text="Olive Raccolte [L]"/>
+        <text name="ui_se_stat_soldCottonBales" text="Balle di Cotone Vendute"/>
+        <text name="ui_se_stat_repaintVehicleCount" text="Veicoli Ridipinti"/>
+        <text name="ui_se_stat_breedWaterBuffaloCount" text="Bufali d'Acqua Allevati"/>
+        <text name="ui_se_stat_breedCowsCount" text="Mucche Allevate"/>
+        <text name="ui_se_stat_baleCount" text="Balle Prodotte"/>
+        <text name="ui_se_stat_truckDistance" text="Distanza Camion [km]"/>
+        <text name="ui_se_stat_cutTreeCount" text="Alberi Abbattuti"/>
+        <text name="ui_se_stat_repairVehicleCount" text="Veicoli Riparati"/>
+        <text name="ui_se_stat_carDistance" text="Distanza Auto [km]"/>
+        <text name="ui_se_stat_breedSheepCount" text="Pecore Allevate"/>
+        <text name="ui_se_stat_missionCount" text="Contratti Completati"/>
+        <text name="ui_se_stat_workedTime" text="Tempo di Lavoro"/>
+        <text name="ui_se_stat_petDogCount" text="Volte che il Cane è Stato Accarezzato"/>
+        <text name="ui_se_stat_sownHectares" text="Ettari Seminati"/>
+        <text name="ui_se_stat_playTime" text="Tempo di Gioco"/>
+        <text name="ui_se_stat_woodTonsSold" text="Tonnellate di Legno Vendute"/>
+        <text name="ui_se_stat_revenue" text="Ricavi"/>
+        <text name="ui_se_stat_horseJumpCount" text="Salti del Cavallo"/>
+        <text name="ui_se_stat_storedBales" text="Balle Stoccate"/>
+        <text name="ui_se_stat_plowedHectares" text="Ettari Arati"/>
+        <text name="ui_se_stat_treeTypesCut" text="Tipi di Albero Abbattuti"/>
+        <text name="ui_se_stat_fuelUsage" text="Consumo Carburante [L]"/>
+        <text name="ui_se_stat_wrappedBales" text="Balle Avvolte"/>
+        <text name="ui_se_stat_weededTime" text="Tempo di Diserbo"/>
+    </texts>
+</l10n>

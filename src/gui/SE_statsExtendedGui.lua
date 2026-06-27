@@ -107,7 +107,7 @@ function SE_statsExtendedGui:addElementAtPosition(element, target, position)
     element.parent = target
 end
 
-function SE_statsExtendedGui:se_onClickCallback(superFunc, statsFrame, state)
+function SE_statsExtendedGui:se_onClickCallback(superFunc, paging, state)
 
     if state == InGameMenuStatisticsFrame.SUB_CATEGORY.STATS_EXTENDED then
         if self.screenController ~= nil then
@@ -116,11 +116,11 @@ function SE_statsExtendedGui:se_onClickCallback(superFunc, statsFrame, state)
 
         local statsExtendedLayout = self.statsFrame.statsExtendedLayout
 
-        FocusManager:linkElements(statsFrame, FocusManager.TOP, statsExtendedLayout)
-        FocusManager:linkElements(statsFrame, FocusManager.BOTTOM, statsExtendedLayout)
+        FocusManager:linkElements(self.statsFrame, FocusManager.TOP, statsExtendedLayout)
+        FocusManager:linkElements(self.statsFrame, FocusManager.BOTTOM, statsExtendedLayout)
     end
 
-    superFunc(statsFrame, state)
+    superFunc(paging, state)
     return nil
 end
 

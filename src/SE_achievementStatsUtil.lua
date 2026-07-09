@@ -48,6 +48,14 @@ local SCORE_BY_ID = {
     -- LoadedOldSavegame (not implemented)
 }
 
+-- Collectible achievements are unlocked via a single event (achivement.targetScore = 1)
+-- I don't think there is a way to look them up because the collectable system is relative to the map so I just hardcode the value.
+local TARGET_BY_ID = {
+    ["CollectiblesUS"] = function() return 25 end, -- Riverbed Springs
+    ["CollectiblesAS"] = function() return 25 end, -- Hutan Pantei
+    ["CollectiblesEU"] = function() return 50 end, -- Zielonka
+}
+
 function SE_achievementStatsUtil:populate()
     self.achievementStats = {}
 
@@ -85,9 +93,16 @@ function SE_achievementStatsUtil:populate()
 end
 
 function SE_achievementStatsUtil:getProgress(achievement, currentScore)
-    local strLocked = tostring(math.floor(currentScore or 0)) .. "/" .. tostring(achievement.targetScore or 0)
+    local targetScore = SE_achievementStatsUtil:getTargetScore(achievement)
+    local strLocked = tostring(math.floor(currentScore or 0)) .. "/" .. tostring(targetScore or 0)
     local strUnlocked = g_i18n:getText("ui_se_stat_unlocked")
     return achievement.unlocked and strUnlocked or strLocked
+end
+
+function SE_achievementStatsUtil:getTargetScore(achievement)
+    local targetResolver = TARGET_BY_ID[achievement.idName]
+    local targetScore = targetResolver ~= nil and targetResolver() or achievement.targetScore
+    return targetScore
 end
 
 function SE_achievementStatsUtil:getBeehives(farmId)

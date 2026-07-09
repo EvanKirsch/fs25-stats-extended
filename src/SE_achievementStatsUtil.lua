@@ -45,15 +45,18 @@ local SCORE_BY_ID = {
     ["CollectiblesUS"]       = function(_, _) return SE_achievementStatsUtil:getCollectableSystemInfo("CollectiblesUS") end,
     ["CollectiblesAS"]       = function(_, _) return SE_achievementStatsUtil:getCollectableSystemInfo("CollectiblesAS") end,
     ["CollectiblesEU"]       = function(_, _) return SE_achievementStatsUtil:getCollectableSystemInfo("CollectiblesEU") end,
-    -- LoadedOldSavegame (not implemented)
+    ["LoadedOldSavegame"]    = function(_, _) return g_i18n:getCurrentDate() end,
 }
 
--- Collectible achievements are unlocked via a single event (achivement.targetScore = 1)
--- I don't think there is a way to look them up because the collectable system is relative to the map so I just hardcode the value.
+-- add target resolver if achivement.targetScore is insufficent to describe target
 local TARGET_BY_ID = {
+    -- Collectible achievements are unlocked via a single event
+    -- I don't think there is a way to look them up because the collectable system is relative to the map so I just hardcode the value.
     ["CollectiblesUS"] = function() return 25 end, -- Riverbed Springs
     ["CollectiblesAS"] = function() return 25 end, -- Hutan Pantei
     ["CollectiblesEU"] = function() return 50 end, -- Zielonka
+    -- LoadedOldSavegame counts months, but I want to provide a clearer target beacuse days are not inculded in calculation
+    ["LoadedOldSavegame"] = function() return SE_achievementStatsUtil:getLastSaveTarget() end, -- Zielonka
 }
 
 function SE_achievementStatsUtil:populate()
@@ -94,7 +97,8 @@ end
 
 function SE_achievementStatsUtil:getProgress(achievement, currentScore)
     local targetScore = SE_achievementStatsUtil:getTargetScore(achievement)
-    local strLocked = tostring(math.floor(currentScore or 0)) .. "/" .. tostring(targetScore or 0)
+    local displayScore = type(currentScore) == "number" and math.floor(currentScore) or (currentScore or 0)
+    local strLocked = tostring(displayScore) .. "/" .. tostring(targetScore or 0)
     local strUnlocked = g_i18n:getText("ui_se_stat_unlocked")
     return achievement.unlocked and strUnlocked or strLocked
 end
@@ -156,6 +160,44 @@ function SE_achievementStatsUtil:getVehicles(farmId)
         end
     end
     return numVehicles
+end
+
+-- date math from FSBaseMission impl, basegame also only uses year and months
+function SE_achievementStatsUtil:getLastSaveTarget()
+    local lastSaveDateStr = g_currentMission ~= nil and g_currentMission.missionInfo ~= nil and g_currentMission.missionInfo.saveDate or nil
+    if lastSaveDateStr == nil then
+        return nil
+    end
+    local yearLastSave, monthLastSave, _ = lastSaveDateStr:match("(%d%d%d%d)-(%d%d)-(%d%d)") -- ignore days
+    if yearLastSave == nil or monthLastSave == nil then
+        return ""
+    end
+    yearLastSave = tonumber(yearLastSave)
+    monthLastSave = tonumber(monthLastSave)
+
+    local targetYear = yearLastSave
+    local targetMonth = monthLastSave + 4
+    if (targetMonth > 12) then
+        targetMonth = targetMonth - 12
+        targetYear = targetYear + 1
+    end
+
+    return SE_achievementStatsUtil:getLocalDate(targetYear, targetMonth, 1)
+end
+
+-- Giant's I18N implemention of the date formating
+function SE_achievementStatsUtil:getLocalDate(year, month, day)
+    local dateStr
+    if g_languageShort == "en" then
+        dateStr = string.format("%04d-%02d-%02d", year, month, day)
+    elseif g_languageShort == "de" then
+        dateStr = string.format("%02d.%02d.%04d", day, month, year)
+    elseif g_languageShort == "jp" then
+        dateStr = string.format("%04d/%02d/%02d", year, month, day)
+    else
+        dateStr = string.format("%02d/%02d/%04d", day, month, year)
+    end
+    return dateStr
 end
 
 function SE_achievementStatsUtil:getCollectableSystemInfo(cName)

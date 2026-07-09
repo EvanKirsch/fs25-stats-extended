@@ -56,7 +56,7 @@ local TARGET_BY_ID = {
     ["CollectiblesAS"] = function() return 25 end, -- Hutan Pantei
     ["CollectiblesEU"] = function() return 50 end, -- Zielonka
     -- LoadedOldSavegame counts months, but I want to provide a clearer target beacuse days are not inculded in calculation
-    ["LoadedOldSavegame"] = function() return SE_achievementStatsUtil:getLastSaveTarget() end, -- Zielonka
+    ["LoadedOldSavegame"] = function() return SE_achievementStatsUtil:getLastSaveTarget() end,
 }
 
 function SE_achievementStatsUtil:populate()

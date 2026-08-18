@@ -13,8 +13,17 @@ Adds a "Statistics Extended" tab to the in-game Statistics screen with two lists
 - Achievements: name, description, and progress (or "Unlocked") for every achievement registered by the game. Note: some unlock condition descriptions are best-effort guesses, not official text.
 - Farm Statistics: session and all-time totals covering breeding, distances traveled, field area worked, time spent on tasks, resource usage, harvests, bales, wood, and more. A few of these duplicate values already shown on the vanilla Statistics tab.
 
-
 Github: https://github.com/EvanKirsch/fs25-stats-extended
+
+Changelog
+---
+1.0.0.1:
+- Adds implementation for LoadedOldSavegame achievement (It's never too late to farm)
+- Improves implementation for collectable achievements (Rusty, Over 9000!, Tutti-Frutti)
+- Adds Italian translation
+
+1.0.0.0:
+- Inital release
 ]]></en>
     <de><![CDATA[
 Fügt dem Ingame-Statistikbildschirm einen Tab "Erweiterte Statistiken" mit zwei Listen für den aktiven Spielstand hinzu:
@@ -25,6 +34,16 @@ Fügt dem Ingame-Statistikbildschirm einen Tab "Erweiterte Statistiken" mit zwei
 Funktioniert im Einzel- und Mehrspielermodus.
 
 Git-hub: https://github.com/EvanKirsch/fs25-stats-extended
+
+Änderungsprotokoll
+---
+1.0.0.1:
+- Implementierung für den Erfolg "LoadedOldSavegame" hinzugefügt (Es ist nie zu spät zum Farmen)
+- Implementierung für Sammel-Erfolge verbessert (Rusty, Over 9000!, Tutti-Frutti)
+- Italienische Übersetzung hinzugefügt
+
+1.0.0.0:
+- Erstveröffentlichung
 ]]></de>
   </description>    
   <iconFilename>icon_statsExtended.dds</iconFilename>

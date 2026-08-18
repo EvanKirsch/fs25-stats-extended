@@ -1,21 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="109" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
   <author>Evan Kirsch</author>
-  <version>1.0.0.0</version>
+  <version>1.0.0.1</version>
   <title>
       <en>Statistics Extended</en>
       <de>Erweiterte Statistiken</de>
   </title>
   <description>
     <en><![CDATA[
-Adds a new tab to the in-game Statistics screen that displays all farm stats info and achievements progress
+Adds a "Statistics Extended" tab to the in-game Statistics screen with two lists for your active savegame:
 
-Please log issues here: https://github.com/EvanKirsch/fs25-stats-extended/issues
+- Achievements: name, description, and progress (or "Unlocked") for every achievement registered by the game. Note: some unlock condition descriptions are best-effort guesses, not official text.
+- Farm Statistics: session and all-time totals covering breeding, distances traveled, field area worked, time spent on tasks, resource usage, harvests, bales, wood, and more. A few of these duplicate values already shown on the vanilla Statistics tab.
+
+
+Github: https://github.com/EvanKirsch/fs25-stats-extended
 ]]></en>
     <de><![CDATA[
-Fügt dem Ingame-Statistikbildschirm einen neuen Tab hinzu, der alle Hofstatistiken und den Fortschritt bei Erfolgen anzeigt.
+Fügt dem Ingame-Statistikbildschirm einen Tab "Erweiterte Statistiken" mit zwei Listen für den aktiven Spielstand hinzu:
 
-Probleme bitte hier melden: https://github.com/EvanKirsch/fs25-stats-extended/issues
+- Erfolge: Name, Beschreibung und Fortschritt (oder "Freigeschaltet") für jeden im Spiel registrierten Erfolg. Hinweis: Einige Beschreibungen der Freischaltbedingungen sind bestmögliche Vermutungen und kein offizieller Text.
+- Hofstatistiken: Sitzungs- und Gesamtwerte zu Zucht, zurückgelegten Strecken, bearbeiteter Feldfläche, Zeitaufwand für Aufgaben, Ressourcenverbrauch, Ernten, Ballen, Holz und mehr. Einige Werte sind bereits im normalen Statistik-Tab enthalten.
+
+Funktioniert im Einzel- und Mehrspielermodus.
+
+Git-hub: https://github.com/EvanKirsch/fs25-stats-extended
 ]]></de>
   </description>    
   <iconFilename>icon_statsExtended.dds</iconFilename>
